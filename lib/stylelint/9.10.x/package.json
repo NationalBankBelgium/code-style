@@ -1,0 +1,4 @@
+{
+  "name": "@nationalbankbelgium/code-style/stylelint",
+  "main": "stylelint.config.js"
+}

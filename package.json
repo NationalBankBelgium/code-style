@@ -1,0 +1,53 @@
+{
+  "name": "@nationalbankbelgium/code-style",
+  "version": "0.0.1",
+  "description": "Front-End code style",
+  "author": {
+    "email": "alexis.georges@nbb.be",
+    "name": "Alexis Georges",
+    "url": "https://www.nbb.be"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/nationalbankbelgium/code-style",
+  "bugs": "https://github.com/nationalbankbelgium/code-style/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NationalBankBelgium/code-style.git"
+  },
+  "keywords": [
+    "code-style",
+    "javascript",
+    "typescript",
+    "stylelint",
+    "prettier",
+    "tslint",
+    "tsconfig"
+  ],
+  "devDependencies": {
+    "@commitlint/cli": "^7.3.2",
+    "@commitlint/config-conventional": "^7.3.1",
+    "codelyzer": "^4.5.0",
+    "commitizen": "^3.0.5",
+    "conventional-changelog-cli": "^2.0.11",
+    "lint-staged": "^8.1.0",
+    "prettier": "^1.16.1",
+    "release-it": "^10.0.0",
+    "stylelint": "^9.10.1",
+    "stylelint-config-prettier": "^5.0.0",
+    "tslint": "^5.14.0",
+    "typescript": "^3.1.6"
+  },
+  "scripts": {
+    "build": "bash ./build.sh",
+    "build:trace": "npm run build -- --trace",
+    "clean": "npx rimraf dist",
+    "clean:modules": "npx rimraf ./node_modules package-lock.json",
+    "clean:slate": "npm run clean:modules && npm install",
+    "commit": "./node_modules/.bin/git-cz",
+    "generate:changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+    "generate:changelog-recent": "conventional-changelog -p angular | tail -n +3",
+    "prettier-check": "prettier \"**/*.{css,html,js,json,md,pcss,scss,ts,yml}\" --write --html-whitespace-sensitivity strict",
+    "release": "release-it",
+    "release:publish": "bash ./release-publish.sh --trace"
+  }
+}

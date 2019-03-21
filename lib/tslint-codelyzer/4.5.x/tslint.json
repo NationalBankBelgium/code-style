@@ -1,0 +1,38 @@
+{
+  "extends": ["codelyzer"],
+  "rules": {
+    "directive-selector": [true, "attribute", "", "kebab-case"],
+    "component-selector": [true, "element", "", "kebab-case"],
+    "angular-whitespace": [true, "check-interpolation", "check-semicolon"],
+    "use-input-property-decorator": true,
+    "use-output-property-decorator": true,
+    "use-host-property-decorator": true,
+    "no-attribute-parameter-decorator": true,
+    "no-input-rename": true,
+    "no-output-on-prefix": true,
+    "no-output-rename": true,
+    "no-forward-ref": true,
+    "use-life-cycle-interface": true,
+    "use-pipe-transform-interface": true,
+    "no-output-named-after-standard-event": true,
+    "max-inline-declarations": true,
+    //    "no-life-cycle-call": true, // FIXME: throws an exception (Codelyzer v4.3.0). Enable this rule when solved
+    "no-conflicting-life-cycle-hooks": true,
+    "enforce-component-selector": true,
+    "component-class-suffix": [true, "Component"],
+    "directive-class-suffix": [true, "Directive"],
+
+    // Codelyzer rules
+    "banana-in-box": true,
+    "contextual-life-cycle": true,
+    "decorator-not-allowed": true,
+    "pipe-impure": true,
+    "templates-no-negated-async": true,
+    "use-pipe-decorator": true,
+    "use-view-encapsulation": false,
+    "trackBy-function": true,
+    "no-unused-css": true,
+    "template-cyclomatic-complexity": [true, 10],
+    "template-conditional-complexity": [true, 4]
+  }
+}

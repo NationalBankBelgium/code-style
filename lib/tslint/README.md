@@ -1,0 +1,24 @@
+<h1 align="center">
+   code style - TSLint-Codelyzer
+</h1>
+
+## About
+
+This sub-package hosts the [TSLint](https://palantir.github.io/tslint/) configuration.
+
+The following versions are available (based on **TSLint** version):
+
+-   3.1.x - `@nationalbankbelgium/code-style/tslint/4.3.x`
+
+## Usage
+
+Adapt the content of your `tslint.json` file as follows:
+
+```json
+{
+	"extends": ["tslint:latest", "whatever config", "@nationalbankbelgium/code-style/tslint"],
+	"rules": {
+		// your rules
+	}
+}
+```
