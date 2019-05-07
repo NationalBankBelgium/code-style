@@ -1,6 +1,7 @@
 {
   "extends": ["codelyzer"],
   "rules": {
+    // Codelyzer recommended rules
     "directive-selector": [true, "attribute", "", "kebab-case"],
     "component-selector": [true, "element", "", "kebab-case"],
     "angular-whitespace": [true, "check-interpolation", "check-semicolon"],
