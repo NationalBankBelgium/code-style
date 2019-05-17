@@ -7,6 +7,13 @@
     "name": "Alexis Georges",
     "url": "https://www.nbb.be"
   },
+  "contributors": [
+    {
+      "email": "christophercr@gmail.com",
+      "name": "Christopher Cortes",
+      "url": "https://github.com/christophercr"
+    }
+  ],
   "license": "MIT",
   "homepage": "https://github.com/nationalbankbelgium/code-style",
   "bugs": "https://github.com/nationalbankbelgium/code-style/issues",
@@ -21,6 +28,7 @@
     "stylelint",
     "prettier",
     "tslint",
+    "codelyzer",
     "tsconfig"
   ],
   "devDependencies": {
@@ -33,7 +41,6 @@
     "prettier": "^1.16.1",
     "release-it": "^10.0.0",
     "stylelint": "^9.10.1",
-    "stylelint-config-prettier": "^5.0.0",
     "tslint": "^5.14.0",
     "typescript": "^3.1.6"
   },

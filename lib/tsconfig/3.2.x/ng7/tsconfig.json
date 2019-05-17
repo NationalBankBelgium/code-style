@@ -1,0 +1,16 @@
+{
+  "extends": "../tsconfig.json",
+  "angularCompilerOptions": {
+    "generateCodeForLibraries": true,
+    "skipMetadataEmit": false,
+    "strictMetadataEmit": false,
+    "skipTemplateCodegen": false,
+    "strictInjectionParameters": true,
+    "fullTemplateTypeCheck": true,
+    "annotateForClosureCompiler": false,
+    "annotationsAs": "static fields",
+    "enableLegacyTemplate": false,
+    "preserveWhitespaces": false,
+    "allowEmptyCodegenFiles": false
+  }
+}

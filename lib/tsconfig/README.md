@@ -9,7 +9,9 @@ This sub-package hosts the [TypeScript](https://www.typescriptlang.org/) configu
 The following versions are available (based on **TypeScript** version and **Angular** version):
 
 -   3.1.x - `@nationalbankbelgium/code-style/tsconfig/3.1.x`
--   3.1.x and NG 7 - `@nationalbankbelgium/code-style/tsconfig/3.1.x/ng7`
+-   3.1.x and Angular 7 - `@nationalbankbelgium/code-style/tsconfig/3.1.x/ng7`
+-   3.2.x - `@nationalbankbelgium/code-style/tsconfig/3.2.x`
+-   3.2.x and Angular 7 - `@nationalbankbelgium/code-style/tsconfig/3.2.x/ng7`
 
 ## Usage
 

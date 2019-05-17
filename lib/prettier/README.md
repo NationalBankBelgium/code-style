@@ -1,5 +1,5 @@
 <h1 align="center">
-   code style - prettier
+   code style - Prettier
 </h1>
 
 ## About

@@ -1,6 +1,5 @@
 {
   "rules": {
-    // TSlint rules
     "member-access": [true, "check-accessor", "check-constructor", "check-parameter-property"],
     "member-ordering": [
       false,
@@ -10,23 +9,12 @@
     ],
     "no-any": false,
     "no-empty-interface": false,
-    "no-inferrable-types": false,
+    "no-inferrable-types": [true, "ignore-params"],
     "no-internal-module": true,
     "no-namespace": [true, "allow-declarations"],
     "no-reference": true,
     "no-var-requires": false,
-    "typedef": [
-      true,
-      "call-signature",
-      // "arrow-call-signature",
-      "parameter",
-      "arrow-parameter",
-      "property-declaration",
-      "variable-declaration",
-      "member-variable-declaration",
-      "object-destructuring",
-      "array-destructuring"
-    ],
+    "typedef": [true, "call-signature", "arrow-call-signature", "parameter", "arrow-parameter", "property-declaration"],
     "typedef-whitespace": [
       false,
       {
@@ -97,10 +85,10 @@
     "encoding": false,
     "interface-name": [false, "never-prefix"],
     "interface-over-type-literal": true,
-    "jsdoc-format": false,
+    "jsdoc-format": [true, "check-multiline-start"],
     "no-angle-bracket-type-assertion": false,
     "no-parameter-properties": false,
-    "no-redundant-jsdoc": false,
+    "no-redundant-jsdoc": true,
     "no-reference-import": true,
     "no-unnecessary-callback-wrapper": false,
     "object-literal-shorthand": false,
@@ -127,7 +115,7 @@
       }
     ],
     "no-magic-numbers": false,
-    "import-blacklist": [true, "@angular/material", "lodash", "rxjs/internal", "rxjs/index", "rxjs/Rx"],
+    "import-blacklist": [true, "@angular/material", "lodash", "rxjs/internal", "rxjs/index", "rxjs/Rx", "lodash-es"],
     "ordered-imports": false,
     "max-classes-per-file": false, // [true, 1],
     "prefer-for-of": true,
@@ -172,17 +160,17 @@
     "deprecation": true,
     "use-default-type-parameter": true,
     "await-promise": true,
-    "no-for-in-array": true
-    //  "no-unused-variable": true,
+    "no-for-in-array": true,
+    "no-unbound-method": [true, { "ignore-static": true, "whitelist": ["expect"], "allow-typeof": true }],
+    "no-unnecessary-type-assertion": true,
+    "restrict-plus-operands": true
     //  "strict-boolean-expressions": true,
     //	"promise-function-async": true,
     //	"completed-docs": true,
-    //  "no-unbound-method": true,
     //  "no-unsafe-any": true,
-    //  "no-unnecessary-type-assertion": true,
-    //  "no-use-before-declare": true,
-    //  "restrict-plus-operands": true,
     //  "strict-type-predicates": true,
+    //  "no-use-before-declare": true, // only useful when using the var keyword
+    //  "no-unused-variable": true, // deprecated as from TSLint 5.11.0
     //  "prefer-readonly": true,
   }
 }
