@@ -1,3 +1,11 @@
+<a name="1.0.0-rc.2"></a>
+
+# [1.0.0-rc.2](https://github.com/NationalBankBelgium/code-style/compare/1.0.0-rc.1...1.0.0-rc.2) (2019-05-20)
+
+### Bug Fixes
+
+-   **build:** fix travis branches to be able to trigger the release process when there is a tag ([f688d48](https://github.com/NationalBankBelgium/code-style/commit/f688d48))
+
 <a name="1.0.0-rc.1"></a>
 
 # [1.0.0-rc.1](https://github.com/NationalBankBelgium/code-style/compare/1.0.0-rc.0...1.0.0-rc.1) (2019-05-20)
