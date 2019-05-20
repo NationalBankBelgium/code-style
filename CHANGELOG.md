@@ -1,6 +1,14 @@
+<a name="1.0.0-rc.1"></a>
+
+# [1.0.0-rc.1](https://github.com/NationalBankBelgium/code-style/compare/1.0.0-rc.0...1.0.0-rc.1) (2019-05-20)
+
+### Bug Fixes
+
+-   **release:** fix expected node version to 10 instead of 8 ([36a70bd](https://github.com/NationalBankBelgium/code-style/commit/36a70bd))
+
 <a name="1.0.0-rc.0"></a>
 
-# 1.0.0-rc.0 (2019-05-20)
+# [1.0.0-rc.0](https://github.com/NationalBankBelgium/code-style/compare/b0c2f73...1.0.0-rc.0) (2019-05-20)
 
 ### Bug Fixes
 
