@@ -35,6 +35,7 @@ env:
 branches:
     only:
         - master
+        - /^\d+\.\d+\.\d(-alpha\.\d+|-beta\.\d+|-rc\.\d+)?$/
 
 cache:
     directories:
