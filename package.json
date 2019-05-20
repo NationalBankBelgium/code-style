@@ -37,6 +37,8 @@
     "codelyzer": "^4.5.0",
     "commitizen": "^3.0.5",
     "conventional-changelog-cli": "^2.0.11",
+    "cz-customizable": "^6.0.0",
+    "husky": "^2.1.0",
     "lint-staged": "^8.1.0",
     "prettier": "^1.16.1",
     "release-it": "^10.0.0",
@@ -56,5 +58,22 @@
     "prettier-check": "prettier \"**/*.{css,html,js,json,md,pcss,scss,ts,yml}\" --write --html-whitespace-sensitivity strict",
     "release": "release-it",
     "release:publish": "bash ./release-publish.sh --trace"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{css,html,js,json,md,pcss,scss,ts,yml}": [
+      "prettier --write --html-whitespace-sensitivity strict",
+      "git add"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
   }
 }
