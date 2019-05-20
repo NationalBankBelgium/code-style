@@ -1,5 +1,5 @@
 <h1 align="center">
-   code style - TSLint
+   code style - TSLint 4.3.x
 </h1>
 
 ## About

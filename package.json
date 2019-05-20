@@ -7,6 +7,13 @@
     "name": "Alexis Georges",
     "url": "https://www.nbb.be"
   },
+  "contributors": [
+    {
+      "email": "christophercr@gmail.com",
+      "name": "Christopher Cortes",
+      "url": "https://github.com/christophercr"
+    }
+  ],
   "license": "MIT",
   "homepage": "https://github.com/nationalbankbelgium/code-style",
   "bugs": "https://github.com/nationalbankbelgium/code-style/issues",
@@ -21,6 +28,7 @@
     "stylelint",
     "prettier",
     "tslint",
+    "codelyzer",
     "tsconfig"
   ],
   "devDependencies": {
@@ -29,11 +37,12 @@
     "codelyzer": "^4.5.0",
     "commitizen": "^3.0.5",
     "conventional-changelog-cli": "^2.0.11",
+    "cz-customizable": "^6.0.0",
+    "husky": "^2.1.0",
     "lint-staged": "^8.1.0",
     "prettier": "^1.16.1",
     "release-it": "^10.0.0",
     "stylelint": "^9.10.1",
-    "stylelint-config-prettier": "^5.0.0",
     "tslint": "^5.14.0",
     "typescript": "^3.1.6"
   },
@@ -49,5 +58,22 @@
     "prettier-check": "prettier \"**/*.{css,html,js,json,md,pcss,scss,ts,yml}\" --write --html-whitespace-sensitivity strict",
     "release": "release-it",
     "release:publish": "bash ./release-publish.sh --trace"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{css,html,js,json,md,pcss,scss,ts,yml}": [
+      "prettier --write --html-whitespace-sensitivity strict",
+      "git add"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
   }
 }

@@ -2,7 +2,7 @@
    NBB Code style
 </h1>
 
-> A library containing code style configuration used for our applications
+> A library containing code style configuration used in applications at the National Bank of Belgium
 
 [![NPM version](https://img.shields.io/npm/v/@nationalbankbelgium/code-style.svg)](https://www.npmjs.com/package/@nationalbankbelgium/code-style)
 [![npm](https://img.shields.io/npm/dm/@nationalbankbelgium/code-style.svg)](https://www.npmjs.com/package/@nationalbankbelgium/code-style)
@@ -12,12 +12,12 @@
 
 ## About
 
-This package hosts style configuration useful in Front-End development in the [National Bank of Belgium](https://www.nbb.be).
+This package hosts style configuration useful in Front-End development at the [National Bank of Belgium](https://www.nbb.be).
 
 It currently provides the following configurations:
 
+-   [codelyzer](https://github.com/NationalBankBelgium/code-style/blob/master/lib/codelyzer/README.md)
 -   [Prettier](https://github.com/NationalBankBelgium/code-style/blob/master/lib/prettier/README.md)
 -   [stylelint](https://github.com/NationalBankBelgium/code-style/blob/master/lib/stylelint/README.md)
 -   [TSLint](https://github.com/NationalBankBelgium/code-style/blob/master/lib/tslint/README.md)
--   [TSLint codelyzer](https://github.com/NationalBankBelgium/code-style/blob/master/lib/tslint-codelyzer/README.md)
 -   [Typescript](https://github.com/NationalBankBelgium/code-style/blob/master/lib/tsconfig/README.md)

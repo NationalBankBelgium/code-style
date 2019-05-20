@@ -1,5 +1,5 @@
 <h1 align="center">
-   code style - TypeScript
+   code style - TypeScript 3.1.x + Angular 7
 </h1>
 
 ## About
