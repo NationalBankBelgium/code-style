@@ -17,11 +17,25 @@ The following versions are available (based on **TypeScript** version and **Angu
 
 Adapt the content of your `tsconfig.json` file as follows:
 
+For TypeScript >= 3.2
+
 ```json
 {
-	"extends": "@nationalbankbelgium/code-style/tsconfig/3.1.x",
+	"extends": "@nationalbankbelgium/code-style/tsconfig/3.2.x",
 	"compilerOptions": {
 		// your configuration
 	}
 }
 ```
+
+For TypeScript < 3.2
+```json
+{
+	"extends": "./node_modules/@nationalbankbelgium/code-style/tsconfig/3.1.x/tsconfig.json",
+	"compilerOptions": {
+		// your configuration
+	}
+}
+```
+
+Since TypeScript 3.2, there is a new way to extend a configuration. More information on [TypeScript Wiki](https://github.com/microsoft/TypeScript/wiki/What%27s-new-in-TypeScript#tsconfigjson-inheritance-via-nodejs-packages)
