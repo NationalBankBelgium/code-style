@@ -16,8 +16,18 @@ This package hosts style configuration useful in Front-End development at the [N
 
 It currently provides the following configurations:
 
--   [codelyzer](https://github.com/NationalBankBelgium/code-style/blob/master/lib/codelyzer/README.md)
--   [Prettier](https://github.com/NationalBankBelgium/code-style/blob/master/lib/prettier/README.md)
--   [stylelint](https://github.com/NationalBankBelgium/code-style/blob/master/lib/stylelint/README.md)
--   [TSLint](https://github.com/NationalBankBelgium/code-style/blob/master/lib/tslint/README.md)
--   [Typescript](https://github.com/NationalBankBelgium/code-style/blob/master/lib/tsconfig/README.md)
+-   [codelyzer](https://github.com/mgechev/codelyzer): in [lib/codelyzer](https://github.com/NationalBankBelgium/code-style/blob/master/lib/codelyzer/README.md)
+-   [Prettier](https://github.com/prettier/prettier): in [lib/prettier](https://github.com/NationalBankBelgium/code-style/blob/master/lib/prettier/README.md)
+-   [stylelint](https://github.com/stylelint/stylelint): in [lib/stylelint](https://github.com/NationalBankBelgium/code-style/blob/master/lib/stylelint/README.md)
+-   [TSLint](https://github.com/palantir/tslint): in [lib/tslint](https://github.com/NationalBankBelgium/code-style/blob/master/lib/tslint/README.md)
+-   [Typescript](https://github.com/microsoft/typescript): in [lib/tsconfig](https://github.com/NationalBankBelgium/code-style/blob/master/lib/tsconfig/README.md)
+
+## Installation
+
+With npm:
+
+> npm install @nationalbankbelgium/code-style
+
+With yarn:
+
+> yarn add @nationalbankbelgium/code-style
