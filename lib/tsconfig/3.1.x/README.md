@@ -10,7 +10,7 @@ This sub-package hosts the [TypeScript](https://www.typescriptlang.org/) configu
 
 Adapt the content of your `tsconfig.json` file as follows:
 
-```json
+```text
 {
 	"extends": "./node_modules/@nationalbankbelgium/code-style/tsconfig/3.1.x/tsconfig.json",
 	"compilerOptions": {

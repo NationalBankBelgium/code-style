@@ -10,7 +10,7 @@ This sub-package hosts the [stylelint](https://stylelint.io) configuration for s
 
 Adapt the content of your `.stylelintrc` file as follows:
 
-```json
+```text
 {
 	"extends": "@nationalbankbelgium/code-style/stylelint/9.10.x",
 	"rules": {
