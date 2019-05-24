@@ -1,3 +1,12 @@
+<a name="1.0.0"></a>
+
+# [1.0.0](https://github.com/NationalBankBelgium/code-style/compare/1.0.0-rc.2...1.0.0) (2019-05-24)
+
+### Bug Fixes
+
+-   **stylelint:** comment unused rules ([4c5cbb4](https://github.com/NationalBankBelgium/code-style/commit/4c5cbb4))
+-   **tsconfig:** wrong usage information in README for TS 3.1.x ([f9c5ea7](https://github.com/NationalBankBelgium/code-style/commit/f9c5ea7))
+
 <a name="1.0.0-rc.2"></a>
 
 # [1.0.0-rc.2](https://github.com/NationalBankBelgium/code-style/compare/1.0.0-rc.1...1.0.0-rc.2) (2019-05-20)
