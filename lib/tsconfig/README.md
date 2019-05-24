@@ -19,7 +19,7 @@ Adapt the content of your `tsconfig.json` file as follows:
 
 For TypeScript >= 3.2
 
-```json
+```text
 {
 	"extends": "@nationalbankbelgium/code-style/tsconfig/3.2.x",
 	"compilerOptions": {
@@ -29,7 +29,8 @@ For TypeScript >= 3.2
 ```
 
 For TypeScript < 3.2
-```json
+
+```text
 {
 	"extends": "./node_modules/@nationalbankbelgium/code-style/tsconfig/3.1.x/tsconfig.json",
 	"compilerOptions": {

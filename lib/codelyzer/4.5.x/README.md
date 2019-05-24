@@ -12,7 +12,7 @@ To be able to use this config, you need to install `codelyzer`.
 
 Adapt the content of your `tslint.json` file as follows:
 
-```json
+```text
 {
 	"extends": ["tslint:latest", "whatever config", "@nationalbankbelgium/code-style/codelyzer/4.5.x"],
 	"rules": {

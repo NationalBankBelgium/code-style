@@ -14,7 +14,7 @@ The following versions are available (based on **stylelint** version):
 
 Adapt the content of your `.stylelintrc` file as follows:
 
-```json
+```text
 {
 	"extends": "@nationalbankbelgium/code-style/stylelint/9.10.x",
 	"rules": {

@@ -14,7 +14,7 @@ The following versions are available (based on **TSLint** version):
 
 Adapt the content of your `tslint.json` file as follows:
 
-```json
+```text
 {
 	"extends": ["tslint:latest", "whatever config", "@nationalbankbelgium/code-style/tslint/4.3.x"],
 	"rules": {

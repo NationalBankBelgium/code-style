@@ -16,7 +16,7 @@ The following versions are available (based on **codelyzer** version):
 
 Adapt the content of your `tslint.json` file as follows:
 
-```json
+```text
 {
 	"extends": ["tslint:latest", "whatever config", "@nationalbankbelgium/code-style/codelyzer/4.5.x"],
 	"rules": {
