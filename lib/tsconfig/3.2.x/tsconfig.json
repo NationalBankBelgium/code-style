@@ -44,7 +44,7 @@
     "target": "es5",
     "outDir": "./dist",
     "baseUrl": "./src",
-    "rootDir": "./src",
+    "rootDirs": ["./src"],
     "lib": ["dom", "dom.iterable", "es2017"],
     "typeRoots": ["./node_modules/@types"],
     "paths": {}
