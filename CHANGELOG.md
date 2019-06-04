@@ -1,3 +1,11 @@
+<a name="1.0.1"></a>
+
+## [1.0.1](https://github.com/NationalBankBelgium/code-style/compare/1.0.0...1.0.1) (2019-06-04)
+
+### Bug Fixes
+
+-   **tsconfig:** remove outDir, baseUrl, rootDir and typeRoots properties from tsconfig files ([4429a38](https://github.com/NationalBankBelgium/code-style/commit/4429a38)), closes [#10](https://github.com/NationalBankBelgium/code-style/issues/10)
+
 <a name="1.0.0"></a>
 
 # [1.0.0](https://github.com/NationalBankBelgium/code-style/compare/1.0.0-rc.2...1.0.0) (2019-05-24)
