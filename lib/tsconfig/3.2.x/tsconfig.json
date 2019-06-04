@@ -42,11 +42,7 @@
     "suppressImplicitAnyIndexErrors": true,
     "suppressExcessPropertyErrors": false,
     "target": "es5",
-    "outDir": "./dist",
-    "baseUrl": "./src",
-    "rootDir": "./src",
     "lib": ["dom", "dom.iterable", "es2017"],
-    "typeRoots": ["./node_modules/@types"],
     "paths": {}
   },
   "exclude": ["node_modules", "dist"],
