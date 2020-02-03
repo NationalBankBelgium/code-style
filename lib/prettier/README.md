@@ -8,7 +8,7 @@ This sub-package hosts the [Prettier](https://prettier.io) configuration.
 
 The following versions are available (based on **Prettier** version):
 
--   9.10.x - `@nationalbankbelgium/code-style/prettier/1.16.x`
+-   1.16.x - `@nationalbankbelgium/code-style/prettier/1.16.x`
 
 ## Usage
 

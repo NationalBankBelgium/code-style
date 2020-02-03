@@ -1,15 +1,15 @@
-# Contributing to NgxFormErrors
+# Contributing to code-style
 
-NgxFormErrors has been created to fulfill the National Bank of Belgium's front-end development needs, but is now an open source project.
+code-style has been created to fulfill the National Bank of Belgium's front-end development needs, but is now an open source project.
 
 As such, third party contributions are more than welcome! Here you'll find all the information you need to get started.
 
-We would love for you to contribute to NgxFormErrors and make it better and better.
+We would love for you to contribute to code-style and make it better and better.
 As a contributor, here are the guidelines we would like you to follow.
 
 ## Code of Conduct
 
-Help us keep NgxFormErrors open and inclusive. Please read and follow our [Code of Conduct](/CODE_OF_CONDUCT.md).
+Help us keep code-style open and inclusive. Please read and follow our [Code of Conduct](/CODE_OF_CONDUCT.md).
 
 ## Got a question or problem?
 
@@ -45,7 +45,7 @@ Before you submit an issue, please search the issue tracker, maybe an issue for 
 We want to fix all the issues as soon as possible, but before fixing a bug we need to reproduce and confirm it. In order to reproduce bugs, we will systematically ask you to provide a minimal reproduction scenario using [Plunker](https://plnkr.co).
 Having a live, reproducible scenario gives us a wealth of important information without going back & forth to you with additional questions like:
 
--   version of NgxFormErrors & Angular used
+-   version of code-style & styling/linting tool used
 -   3rd party libraries and their versions
 -   and most importantly, a use-case that fails
 
@@ -59,13 +59,13 @@ You can file new issues by filling out our [new issue form](https://github.com/N
 
 ### Forking
 
-NgxFormErrors development is done using a forking model with Pull Requests (PRs), so the very first thing you should do is create your fork: https://help.github.com/articles/fork-a-repo/
+code-style development is done using a forking model with Pull Requests (PRs), so the very first thing you should do is create your fork: https://help.github.com/articles/fork-a-repo/
 
 We heavily recommend using the "GitFlow" workflow (see workflow section below) with feature branches.
 
 ### Integrating changes to your fork
 
-Once you're found what you want to contribute to NgxFormErrors, then:
+Once you're found what you want to contribute to code-style, then:
 
 -   Create a feature branch in your fork: `git checkout -b my-new-branch master`
 -   Configure the upstream
@@ -134,7 +134,7 @@ Now, `git flow` commands are integrated at least in the Windows client and allow
 
 First, here's a very useful cheatsheet about the git flow commands: https://danielkummer.github.io/git-flow-cheatsheet/
 
-Here's a summary of the workflow we recommend to contribute to NgxFormErrors along with the commands to use. Note that this only uses a subset of what git flow has to offer.
+Here's a summary of the workflow we recommend to contribute to code-style along with the commands to use. Note that this only uses a subset of what git flow has to offer.
 
 You'll notice that we sometimes give a `git flow ...` command and alternative commands without git flow.
 
@@ -143,7 +143,7 @@ Workflow and commands:
 -   fork: through GitHub
 -   clone: `git clone https://github.com/<username>/code-style`
 -   add upstream: `git remote add upstream https://github.com/NationalBankBelgium/code-style`
-    -   that way you can fetch new commits that have been integrated into NgxFormErrors's main repository
+    -   that way you can fetch new commits that have been integrated into code-style's main repository
 -   initialize git flow: `git flow init -d`
     -   you now have a develop branch
     -   -d for default branch names (develop, master, feature/, release/, hotfix/)
@@ -201,10 +201,10 @@ If you go that way then you have to:
 -   clone the repository of the other developer or just checkout the other developer's feature branch to work on it: `git checkout -b workflow <username>/feature/<name>`
 -   make changes
 -   push the changes
--   sync your local repo with the main repository of NgxFormErrors
--   create PRs against the main repository of NgxFormErrors (or let the other developer do it)
+-   sync your local repo with the main repository of code-style
+-   create PRs against the main repository of code-style (or let the other developer do it)
 
-In any case, after PRs are merged into NgxFormErrors, you can normally forget about the feature branches and delete those to keep your fork clean
+In any case, after PRs are merged into code-style, you can normally forget about the feature branches and delete those to keep your fork clean
 
 -   `git branch -d feature/<name>`
 
@@ -220,106 +220,49 @@ TODO add project structure details
 
 ## Building from source
 
-If you want to build NgxFormErrors from source, you need to...
+If you want to build code-style from source, you need to...
 
 -   install NodeJS (8.0.0+) and npm (5.6.0+)
 -   clone this git repository: `git clone https://github.com/NationalBankBelgium/code-style.git`
--   run `npm run install:all` from the root directory of NgxFormErrors (this command will also build the NgxFormErrors packages and install the demo app)
--   or simply run `npm install` from the root directory of NgxFormErrors in case you don't want to install the demo app
+-   run `npm run install` from the root directory of code-style
 
-### Executing NgxFormErrors's main build script
+### Executing code-style's main build script
 
-Anytime you make modifications to the NgxFormErrors library, you'll need to
+Anytime you make modifications to the code-style library, you'll need to
 
--   execute `npm run build` from the root directory of NgxFormErrors
--   execute `npm install` again on the demo app directory to get those changes or simply run `npm run update:demo` from the root directory of NgxFormErrors
+-   execute `npm run build` from the root directory of code-style
 
-NgxFormErrors is built with [ng-packagr](https://github.com/ng-packagr/ng-packagr), which means that the final package implements the [Angular Package Format](https://docs.google.com/document/d/1CZC2rcpxffTDfRDs6p1cfbmKNLA6x5O-NtkJglDaBVs/preview) providing the following bundles:
+That command will then build code-style using the [build script](/build.sh).
 
--   FES2015
--   FESM5
--   ESM2015
--   ESM5
--   UMD
+### Hacking the code-style library
 
-So it can be consumed by [Angular CLI](https://github.com/angular/angular-cli), [Webpack](https://github.com/webpack/webpack) or [SystemJS](https://github.com/systemjs/systemjs).
-
-### Hacking the demo
-
-If you want to modify the demo app:
-
--   go to the demo's folder: `cd demo-app`
--   install dependencies: `npm install`
--   run it: `npm start`
--   open up your browser at http://localhost:3000
--   make your changes
-
-If you make modifications, they'll be applied automatically after a Webpack rebuild.
-
-By default the demo app depends on the published NgxFormError packages over at npm.
-But once the main build script at NgxFormErrors's root (cfr previous section) is executed (e.g., using `npm install` or `npm run build` at the root), then the demo app will depend on the contents of the dist folder.
-
-### Hacking the NgxFormErrors library
-
-If you want to modify the NgxFormErrors library:
+If you want to modify the code-style library:
 
 -   go to the package folder. `cd packages/<name>`
 -   install its dependencies: `npm install`
 -   make your changes
--   execute `npm run build` at NgxFormErrors's root
--   update the demo app and add examples to it / adapt existing code if needed
+-   execute `npm run build` at code-style's root
 
 Start hacking :)
-
-If you want to integrate examples or update code in the demo app and test/validate your changes, then you can use the following scripts from the root:
-
--   rebuild: `npm run build`
--   update the demo: `npm run update:demo`
--   run the demo: `npm run demo`
 
 ## Executing test suites
 
 Anytime you integrate or modify features, you need to make sure the relevant test suites still pass.
-You can execute the tests for the NgxFormErrors library using the following command at the root: `npm test`
+You can execute the tests for the code-style library using the following command at the root: `npm test`
 
-## Cleaning up the project / packages
+## Cleaning up the project
 
-### Cleaning up dist folders
+### Cleaning up dist folder
 
 If you want to clean up the generated dist folder, you can
 
 -   execute the `clean` npm script
--   navigate to the demo folder and run the `clean` npm script
--   or you can execute `npm run clean:all` to clean up the dist folder of the library and the one of the demo
 
 ### Cleaning up node_modules folder and package-lock.json
 
 If you want to clean up completely the installed _node_modules_ and reinstall later on from scratch (without the package-lock.json file), you can
 
 -   execute the `clean:modules` npm script
--   navigate to the demo folder and run the `clean:modules` npm script
--   or you can execute the `clean:modules:all` npm script to clean up the _node_modules_ folder of the library and the one of the demo
-
-## Documentation
-
-### API docs
-
-The API documentation for NgxFormErrors is generated by [compodoc](https://compodoc.app).
-We care a lot about the quality of our docs and for this reason, it's important to make sure that you provide [JSDoc](http://usejsdoc.org/) tags with your code.
-You can build & serve the API docs in watch mode using this script for example: `npm run docs:serve`. By doing so, you can quickly iterate between adapting the code and going back to the API docs to check the results.
-
-You can also focus on the coverage using `npm run docs:coverage`.
-
-Compodoc provides some documentation about the supported JSDoc tags:
-
--   https://compodoc.app/guides/jsdoc-tags.html
--   https://compodoc.app/guides/comments.html
-
-With each release of NgxFormErrors (including nightly builds), we will also publish our API documentation.
-
-### Developer guide and examples
-
-Coming soon...
 
 ## Releasing a version
 
@@ -352,16 +295,14 @@ Must be one of the following:
 
 Must be one of the following:
 
--   **accessibility**
--   **build**
--   **developer-guide**
--   **docs**
--   **qa**
--   **release**
 -   **all**
--   **service**
--   **directive**
--   **demo**
+-   **build**
+-   **docs**
+-   **prettier**
+-   **release**
+-   **stylelint**
+-   **tsconfig**
+-   **tslint**
 
 If the scope you want to specify is not in the list, you can ask to add it or add it in the commitlint
 configuration file (`commitlint.config.js`) in the root.
