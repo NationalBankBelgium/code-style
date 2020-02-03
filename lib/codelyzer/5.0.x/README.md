@@ -1,17 +1,12 @@
 <h1 align="center">
-   code style - codelyzer
+   code style - codelyzer 5.0.x
 </h1>
 
 ## About
 
-This sub-package hosts the [codelyzer](https://github.com/mgechev/codelyzer) configuration.
+This sub-package hosts the [codelyzer](https://github.com/mgechev/codelyzer) configuration for version 5.0.x.
 
 To be able to use this config, you need to install `codelyzer`.
-
-The following versions are available (based on **codelyzer** version):
-
--   4.5.x - `@nationalbankbelgium/code-style/codelyzer/4.5.x`
--   5.0.x - `@nationalbankbelgium/code-style/codelyzer/5.0.x`
 
 ## Usage
 
