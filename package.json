@@ -32,16 +32,17 @@
     "tsconfig"
   ],
   "devDependencies": {
-    "@commitlint/cli": "^7.3.2",
-    "@commitlint/config-conventional": "^7.3.1",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@release-it/conventional-changelog": "^1.1.0",
     "codelyzer": "^4.5.0",
-    "commitizen": "^3.0.5",
-    "conventional-changelog-cli": "^2.0.11",
-    "cz-customizable": "^6.0.0",
-    "husky": "^2.1.0",
-    "lint-staged": "^8.1.0",
+    "commitizen": "^4.0.3",
+    "conventional-changelog-cli": "^2.0.31",
+    "cz-customizable": "^6.2.0",
+    "husky": "^4.2.1",
+    "lint-staged": "^10.0.7",
     "prettier": "^1.16.1",
-    "release-it": "^10.0.0",
+    "release-it": "^12.4.3",
     "stylelint": "^13.0.0",
     "tslint": "^5.14.0",
     "typescript": "^3.1.6"
@@ -67,8 +68,7 @@
   },
   "lint-staged": {
     "*.{css,html,js,json,md,pcss,scss,ts,yml}": [
-      "prettier --write --html-whitespace-sensitivity strict",
-      "git add"
+      "prettier --write --html-whitespace-sensitivity strict"
     ]
   },
   "config": {

@@ -1,38 +1,41 @@
 {
-	"non-interactive": false,
-	"dry-run": false,
-	"verbose": false,
-	"force": false,
-	"pkgFiles": ["package.json", "package-lock.json"],
-	"increment": "conventional:angular",
-	"scripts": {
-		"afterRelease": false,
-		"beforeStage": "npm run generate:changelog",
-		"beforeStart": false
-	},
-	"git": {
-		"changelog": "npm run generate:changelog-recent",
-		"requireCleanWorkingDir": true,
-		"requireUpstream": true,
-		"commit": true,
-		"commitMessage": "chore(release): release %s",
-		"commitArgs": "",
-		"tag": true,
-		"tagName": "%s",
-		"tagAnnotation": "%s",
-		"push": true,
-		"pushArgs": "",
-		"pushRepo": "origin"
-	},
-	"npm": {
-		"publish": false
-	},
-	"github": {
-		"release": true,
-		"releaseName": "Release %s",
-		"draft": false,
-		"tokenRef": "GITHUB_TOKEN",
-		"assets": null,
-		"host": null
-	}
+  "non-interactive": false,
+  "dry-run": false,
+  "verbose": false,
+  "force": false,
+  "scripts": {
+    "afterRelease": null,
+    "beforeStage": "npm run generate:changelog"
+  },
+  "plugins": {
+    "@release-it/conventional-changelog": {
+      "preset": "angular"
+    }
+  },
+  "git": {
+    "changelog": "npm run generate:changelog-recent",
+    "requireCleanWorkingDir": true,
+    "requireUpstream": true,
+    "requireCommits": false,
+    "commit": true,
+    "commitMessage": "chore(release): release %s",
+    "commitArgs": "",
+    "tag": true,
+    "tagName": "%s",
+    "tagAnnotation": "%s",
+    "push": true,
+    "pushArgs": "--follow-tags",
+    "pushRepo": "origin"
+  },
+  "npm": {
+    "publish": false
+  },
+  "github": {
+    "release": true,
+    "releaseName": "Release %s",
+    "draft": false,
+    "tokenRef": "GITHUB_TOKEN",
+    "assets": null,
+    "host": null
+  }
 }
