@@ -9,13 +9,14 @@ readonly prettierFolder=${libFolder}/prettier
 readonly stylelintFolder=${libFolder}/stylelint
 readonly tsconfigFolder=${libFolder}/tsconfig
 
-export NODE_PATH=${NODE_PATH:-}:${currentDir}/node_modules
-
-source ${currentDir}/scripts/ci/_travis-fold.sh
+source ${currentDir}/scripts/ci/_ghactions-group.sh
 source ${currentDir}/util-functions.sh
 
 VERBOSE=false
 TRACE=false
+
+logInfo "============================================="
+logInfo "Validation of Code-Style configurations"
 
 for ARG in "$@"; do
   case "$ARG" in
@@ -35,17 +36,23 @@ for ARG in "$@"; do
       ;;
   esac
 done
+logInfo "============================================="
 
-travisFoldStart "create temporary test folder ${testFolder}" "no-xtrace"
+ghActionsGroupStart "create temporary test folder ${testFolder}" "no-xtrace"
 rm -rf ${testFolder}
 mkdir -p ${testFolder}
-travisFoldEnd "create temporary test folder ${testFolder}"
+ghActionsGroupEnd "create temporary test folder ${testFolder}"
 
-#travisFoldStart "validate codelyzer configurations" "no-xtrace"
+#ghActionsGroupStart "validate codelyzer configurations" "no-xtrace"
 # TSLint configuration cannot be tested. See: https://github.com/palantir/tslint/issues/889
-#travisFoldEnd "validate codelyzer configurations"
+#ghActionsGroupEnd "validate codelyzer configurations"
 
-travisFoldStart "validate prettier configurations" "no-xtrace"
+logInfo "============================================="
+logInfo "validate prettier configurations"
+logInfo "============================================="
+# FIXME Uncomment this once GitHub Actions support nested logs
+# See: https://github.community/t5/GitHub-Actions/Feature-Request-Enhancements-to-group-commands-nested-named/m-p/45399
+# ghActionsGroupStart "validate prettier configurations" "no-xtrace"
 logDebug "get all prettier versions to validate"
 PRETTIER_VERSIONS=($(ls ${prettierFolder} | grep "^[0-9]"))
 logDebug "PRETTIER_VERSIONS: ${PRETTIER_VERSIONS[*]}"
@@ -56,7 +63,7 @@ touch ${TEMP_TEST_PRETTIER}
 
 for PRETTIER_VERSION in ${PRETTIER_VERSIONS[@]}
 do
-  travisFoldStart "validate prettier ${PRETTIER_VERSION}" "no-xtrace"
+  ghActionsGroupStart "validate prettier ${PRETTIER_VERSION}" "no-xtrace"
   TEMP_CONFIG_PRETTIER="${testFolder}/prettier-test-file-${PRETTIER_VERSION}.js"
   logDebug "create temporary prettier config file: ${TEMP_CONFIG_PRETTIER}"
   echo "module.exports=require('../../lib/prettier/${PRETTIER_VERSION}/.prettierrc.js');" > ${TEMP_CONFIG_PRETTIER}
@@ -66,11 +73,16 @@ do
     logInfo "The prettier configuration contains unknown rules"
     die ${testResult}
   fi
-  travisFoldEnd "validate prettier ${PRETTIER_VERSION}"
+  ghActionsGroupEnd "validate prettier ${PRETTIER_VERSION}"
 done
-travisFoldEnd "validate prettier configurations"
+# ghActionsGroupEnd "validate prettier configurations"
 
-travisFoldStart "validate stylelint configurations" "no-xtrace"
+logInfo "============================================="
+logInfo "validate stylelint configurations"
+logInfo "============================================="
+# FIXME Uncomment this once GitHub Actions support nested logs
+# See: https://github.community/t5/GitHub-Actions/Feature-Request-Enhancements-to-group-commands-nested-named/m-p/45399
+#ghActionsGroupStart "validate stylelint configurations" "no-xtrace"
 logDebug "get all stylelint versions to validate"
 STYLELINT_VERSIONS=($(ls ${stylelintFolder} | grep "^[0-9]"))
 logDebug "STYLELINT_VERSIONS: ${STYLELINT_VERSIONS[*]}"
@@ -81,18 +93,23 @@ touch ${TEMP_TEST_STYLELINT}
 
 for STYLELINT_VERSION in ${STYLELINT_VERSIONS[@]}
 do
-  travisFoldStart "validate stylelint ${STYLELINT_VERSION}" "no-xtrace"
+  ghActionsGroupStart "validate stylelint ${STYLELINT_VERSION}" "no-xtrace"
   TEMP_CONFIG_STYLELINT="${testFolder}/stylelint-test-file-${STYLELINT_VERSION}.json"
   logDebug "create temporary stylelint config file: ${TEMP_CONFIG_STYLELINT}"
   echo "{\"extends\":\"../../lib/stylelint/${STYLELINT_VERSION}/stylelint.config.js\"}" > ${TEMP_CONFIG_STYLELINT}
   logDebug "run command \"npx stylelint@${STYLELINT_VERSION} --config ${TEMP_CONFIG_STYLELINT} ${TEMP_TEST_STYLELINT}\""
   npx stylelint@${STYLELINT_VERSION} --config ${TEMP_CONFIG_STYLELINT} ${TEMP_TEST_STYLELINT}
-  travisFoldEnd "validate stylelint ${STYLELINT_VERSION}"
+  ghActionsGroupEnd "validate stylelint ${STYLELINT_VERSION}"
 done
 
-travisFoldEnd "validate stylelint configurations"
+#ghActionsGroupEnd "validate stylelint configurations"
 
-travisFoldStart "validate tsconfig configurations" "no-xtrace"
+logInfo "============================================="
+logInfo "validate tsconfig configurations"
+logInfo "============================================="
+# FIXME Uncomment this once GitHub Actions support nested logs
+# See: https://github.community/t5/GitHub-Actions/Feature-Request-Enhancements-to-group-commands-nested-named/m-p/45399
+#ghActionsGroupStart "validate tsconfig configurations" "no-xtrace"
 logDebug "get all tsconfig versions to validate"
 TSCONFIG_VERSIONS=($(ls ${tsconfigFolder} | grep "^[0-9]"))
 logDebug "TSCONFIG_VERSIONS: ${TSCONFIG_VERSIONS[*]}"
@@ -103,20 +120,20 @@ touch ${TEMP_TEST_TSCONFIG}
 
 for TSCONFIG_VERSION in ${TSCONFIG_VERSIONS[@]}
 do
-  travisFoldStart "validate tsconfig ${TSCONFIG_VERSION}" "no-xtrace"
+  ghActionsGroupStart "validate tsconfig ${TSCONFIG_VERSION}" "no-xtrace"
   TEMP_CONFIG_TSCONFIG="${testFolder}/tsconfig-test-file-${TSCONFIG_VERSION}.json"
   logDebug "create temporary tsconfig file: ${TEMP_CONFIG_TSCONFIG}"
   echo "{\"extends\":\"../../lib/tsconfig/${TSCONFIG_VERSION}/tsconfig.json\",\"compilerOptions\":{\"baseUrl\":\".\"}}" > ${TEMP_CONFIG_TSCONFIG}
   logDebug "run command \"npx typescript@${TSCONFIG_VERSION} -p ${TEMP_CONFIG_TSCONFIG}\""
   npx typescript@${TSCONFIG_VERSION} -p ${TEMP_CONFIG_TSCONFIG}
-  travisFoldEnd "validate tsconfig ${TSCONFIG_VERSION}"
+  ghActionsGroupEnd "validate tsconfig ${TSCONFIG_VERSION}"
 done
 
-travisFoldEnd "validate tsconfig configurations"
+#ghActionsGroupEnd "validate tsconfig configurations"
 
-#travisFoldEnd "validate tslint configurations" "no-xtrace"
+#ghActionsGroupEnd "validate tslint configurations" "no-xtrace"
 # TSLint configuration cannot be tested. See: https://github.com/palantir/tslint/issues/889
-#travisFoldEnd "validate tslint configurations"
+#ghActionsGroupEnd "validate tslint configurations"
 
 # Print return arrows as a log separator
-travisFoldReturnArrows
+ghActionsGroupReturnArrows

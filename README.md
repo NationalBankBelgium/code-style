@@ -6,6 +6,7 @@
 
 [![NPM version](https://img.shields.io/npm/v/@nationalbankbelgium/code-style.svg)](https://www.npmjs.com/package/@nationalbankbelgium/code-style)
 [![npm](https://img.shields.io/npm/dm/@nationalbankbelgium/code-style.svg)](https://www.npmjs.com/package/@nationalbankbelgium/code-style)
+[![Build Status](https://github.com/NationalBankBelgium/code-style/workflows/build/badge.svg)](https://github.com/NationalBankBelgium/code-style/actions?query=workflow%3Abuild)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 [![License](https://img.shields.io/cocoapods/l/AFNetworking.svg)](LICENSE)
@@ -63,8 +64,8 @@ We're supported by [Jetbrains](https://www.jetbrains.com) and their awesome [sup
 
 <a href="https://www.jetbrains.com"><img src="http://www.underconsideration.com/brandnew/archives/jetbrains_logo_detail.jpg" width="144px"></a>
 
-### Travis
+### GitHub Actions
 
-We're supported by [Travis](https://travis-ci.org/)
+We're supported by [GitHub Actions](https://github.com/features/actions)
 
-<a href="https://travis-ci.org/"><img src="https://travis-ci.com/images/logos/TravisCI-Full-Color.png" width="144px"></a>
+<a href="https://github.com/features/actions"><img src="https://github.githubassets.com/images/modules/site/features/actions-icon-actions.svg" width="144px"></a>
