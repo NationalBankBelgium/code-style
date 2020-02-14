@@ -43,5 +43,6 @@ cache:
 
 script:
     - npm run build
+    - npm run test
     - npm run release:publish
     - bash ./scripts/ci/print-logs.sh

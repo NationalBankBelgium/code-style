@@ -58,7 +58,8 @@
     "generate:changelog-recent": "conventional-changelog -p angular | tail -n +3",
     "prettier-check": "prettier \"**/*.{css,html,js,json,md,pcss,scss,ts,yml}\" --write --html-whitespace-sensitivity strict",
     "release": "release-it",
-    "release:publish": "bash ./release-publish.sh --trace"
+    "release:publish": "bash ./release-publish.sh --trace",
+    "test": "bash ./test.sh"
   },
   "husky": {
     "hooks": {
