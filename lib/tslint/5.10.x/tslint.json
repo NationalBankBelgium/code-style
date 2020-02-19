@@ -161,7 +161,7 @@
     "use-default-type-parameter": true,
     "await-promise": true,
     "no-for-in-array": true,
-    "no-unbound-method": [true, { "ignore-static": true, "whitelist": ["expect"], "allow-typeof": true }],
+    "no-unbound-method": [true, { "ignore-static": true, "allow-typeof": true }],
     "no-unnecessary-type-assertion": true,
     "restrict-plus-operands": true
     //  "strict-boolean-expressions": true,
