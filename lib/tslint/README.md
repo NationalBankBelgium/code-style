@@ -20,6 +20,7 @@ The following versions are available (based on **TSLint** version):
 -   5.18.x - `@nationalbankbelgium/code-style/tslint/5.18.x`
 -   5.19.x - `@nationalbankbelgium/code-style/tslint/5.19.x`
 -   5.20.x - `@nationalbankbelgium/code-style/tslint/5.20.x`
+-   6.0.x - `@nationalbankbelgium/code-style/tslint/6.0.x`
 
 ## Usage
 
@@ -27,7 +28,7 @@ Adapt the content of your `tslint.json` file as follows:
 
 ```text
 {
-	"extends": ["tslint:latest", "whatever config", "@nationalbankbelgium/code-style/tslint/5.20.x"],
+	"extends": ["tslint:latest", "whatever config", "@nationalbankbelgium/code-style/tslint/6.0.x"],
 	"rules": {
 		// your rules
 	}
