@@ -1,3 +1,11 @@
+<a name="1.1.1"></a>
+
+## [1.1.1](https://github.com/NationalBankBelgium/code-style/compare/1.1.0...1.1.1) (2020-02-19)
+
+### Bug Fixes
+
+-   **stylelint:** disable incorrecly enabled stylelint rules from stylelint 10.0.x to 13.0.x ([4c9a213](https://github.com/NationalBankBelgium/code-style/commit/4c9a213)), closes [#32](https://github.com/NationalBankBelgium/code-style/issues/32)
+
 <a name="1.1.0"></a>
 
 # [1.1.0](https://github.com/NationalBankBelgium/code-style/compare/1.0.1...1.1.0) (2020-02-18)
