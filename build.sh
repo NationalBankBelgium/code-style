@@ -9,16 +9,16 @@ export NODE_PATH=${NODE_PATH:-}:${currentDir}/node_modules
 VERBOSE=false
 TRACE=false
 
-source ${currentDir}/scripts/ci/_travis-fold.sh
+source ${currentDir}/scripts/ci/_ghactions-group.sh
 source ${currentDir}/util-functions.sh
 
-travisFoldStart "clean dist" "no-xtrace"
+ghActionsGroupStart "clean dist" "no-xtrace"
 rm -rf ${distFolder}
-travisFoldEnd "clean dist"
+ghActionsGroupEnd "clean dist"
 
 mkdir -p ${distFolder}
 
-travisFoldStart "build package" "no-xtrace"
+ghActionsGroupStart "build package" "no-xtrace"
 
 logInfo "Copy essential files in dist"
 syncOptions=(-a --include="README.md" --include="LICENSE" --include="package.json" --exclude="*" --exclude="**/*")
@@ -34,4 +34,4 @@ logInfo "Generate npm package (tgz file)"
 cd ${distFolder} > /dev/null
 npm pack ./ --silent
 
-travisFoldEnd "build package"
+ghActionsGroupEnd "build package"
