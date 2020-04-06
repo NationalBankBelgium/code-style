@@ -35,17 +35,17 @@
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
     "@release-it/conventional-changelog": "^1.1.0",
-    "codelyzer": "^5.2.0",
+    "codelyzer": "~5.2.0",
     "commitizen": "^4.0.3",
     "conventional-changelog-cli": "^2.0.31",
     "cz-customizable": "^6.2.0",
     "husky": "^4.2.1",
     "lint-staged": "^10.0.7",
-    "prettier": "^1.16.1",
+    "prettier": "~1.16.1",
     "release-it": "^12.4.3",
-    "stylelint": "^13.0.0",
-    "tslint": "^5.14.0",
-    "typescript": "^3.1.6"
+    "stylelint": "~13.0.0",
+    "tslint": "~5.10.0",
+    "typescript": "~3.2.4"
   },
   "scripts": {
     "build": "bash ./build.sh",
