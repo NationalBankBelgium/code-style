@@ -44,7 +44,7 @@
     "prettier": "~1.16.1",
     "release-it": "^12.4.3",
     "stylelint": "~13.0.0",
-    "tslint": "~5.10.0",
+    "tslint": "~5.20.1",
     "typescript": "~3.2.4"
   },
   "scripts": {
