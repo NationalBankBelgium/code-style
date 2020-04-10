@@ -35,3 +35,25 @@ Adapt the content of your `tslint.json` file as follows:
 	}
 }
 ```
+
+## Recommended Additional Configs
+
+We highly recommend using [Prettier](https://prettier.io) to handle all the formatting hassle in your codebase.
+In fact `code-style` also provides a Prettier config you can use: [code style - Prettier](../prettier/README.md).
+
+In this case, when using Prettier you would also need an additional TSLint configuration preset: [tslint-config-prettier](https://github.com/prettier/tslint-config-prettier)
+to avoid conflicts with this `code-style/tslint` config regarding some formatting related rules.
+
+So make sure to use those configs in your `tslint.json` as follows:
+
+```text
+{
+	"extends": ["tslint:latest", "whatever config", "@nationalbankbelgium/code-style/tslint/6.1.x", "tslint-config-prettier"],
+	"rules": {
+		// your rules
+	}
+}
+```
+
+**IMPORTANT: notice that the `tslint-config-prettier` preset is used at the end of the `extends` list. The reason for this is that such preset
+overrides any formatting TSLint rule that was enabled by the precedent presets that may conflict with Prettier.**
