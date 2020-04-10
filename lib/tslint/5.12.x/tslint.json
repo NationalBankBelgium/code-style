@@ -148,6 +148,10 @@
     "no-duplicate-switch-case": true,
     "newline-before-return": false,
     "newline-per-chained-call": false,
+    "file-name-casing": [true, { "public_api.ts": "snake-case", ".*": "kebab-case" }],
+    "ban-ts-ignore": true,
+    "function-constructor": true,
+    "unnecessary-constructor": true,
 
     // TSlint rules that require type info
     "no-inferred-empty-object-type": true,
@@ -163,7 +167,8 @@
     "no-for-in-array": true,
     "no-unbound-method": [true, { "ignore-static": true, "allow-typeof": true }],
     "no-unnecessary-type-assertion": true,
-    "restrict-plus-operands": true
+    "restrict-plus-operands": true,
+    "unnecessary-bind": true
     //  "strict-boolean-expressions": true,
     //	"promise-function-async": true,
     //	"completed-docs": true,
