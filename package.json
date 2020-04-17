@@ -41,7 +41,7 @@
     "cz-customizable": "^6.2.0",
     "husky": "^4.2.1",
     "lint-staged": "^10.0.7",
-    "prettier": "~1.16.1",
+    "prettier": "~2.0.4",
     "release-it": "^13.5.2",
     "stylelint": "~13.3.1",
     "tslint": "~6.1.0",
