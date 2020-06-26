@@ -1,73 +1,83 @@
-<a name="1.1.1"></a>
+# [1.2.0](https://github.com/NationalBankBelgium/code-style/compare/1.1.1...1.2.0) (2020-06-26)
+
+### Bug Fixes
+
+-   **tslint:** remove wrong 'whitelist' option from 'no-unbound-method' rule in 5.10.x config since it only exists as from TSLint v5.13 ([b997adc](https://github.com/NationalBankBelgium/code-style/commit/b997adced818054d58aea9351cb01a998f51fb1d))
+
+### Features
+
+-   **stylelint:** add support for stylelint 13.1.x ([4e0a310](https://github.com/NationalBankBelgium/code-style/commit/4e0a31080a4f14ba04aed3e27397ce25c97e173d))
+-   **stylelint:** add support for stylelint 13.2.x ([ad61559](https://github.com/NationalBankBelgium/code-style/commit/ad615599586b555be2642d92a40e90991732dfd3))
+-   **stylelint:** add support for stylelint 13.3.x ([ea1095c](https://github.com/NationalBankBelgium/code-style/commit/ea1095c03530650379a8cde26c94e0417cf5b123))
+-   **tslint:** add support for tslint 5.11.x ([2269234](https://github.com/NationalBankBelgium/code-style/commit/2269234e15ca21c9a7a274222fe4c622e5b45a13))
+-   **tslint:** add support for tslint 5.12.x ([2a6bffa](https://github.com/NationalBankBelgium/code-style/commit/2a6bffab80d62646478345eace8cd50adf5994c6))
+-   **tslint:** add support for tslint 5.13.x ([a6177e8](https://github.com/NationalBankBelgium/code-style/commit/a6177e88d296ab62958046438f42fde5b23160d7))
+-   **tslint:** add support for tslint 5.14.x ([e701b6d](https://github.com/NationalBankBelgium/code-style/commit/e701b6d3a841e8d3919dd5b76c2aff8ad1647953))
+-   **tslint:** add support for tslint 5.15.x ([d380804](https://github.com/NationalBankBelgium/code-style/commit/d380804fadf3ed6bbc022cdcf6d6b6dde0f1c8e7))
+-   **tslint:** add support for tslint 5.16.x ([652ff46](https://github.com/NationalBankBelgium/code-style/commit/652ff46465c5624023d15c3b2c761ec42aeb73df))
+-   **tslint:** add support for tslint 5.17.x ([7bdbcd3](https://github.com/NationalBankBelgium/code-style/commit/7bdbcd34cd91b1b4b14a1ebdf3f560dc5f1638c9))
+-   **tslint:** add support for tslint 5.18.x ([d0c4f48](https://github.com/NationalBankBelgium/code-style/commit/d0c4f4816e1d88c976aff43809ddd5fc12580f5f))
+-   **tslint:** add support for tslint 5.19.x ([cf51548](https://github.com/NationalBankBelgium/code-style/commit/cf515484e3b187c32dac324f2ca17a3f5a25f481))
+-   **tslint:** add support for tslint 5.20.x ([4036d3b](https://github.com/NationalBankBelgium/code-style/commit/4036d3bfbb4d8bb5e98e4912948c9f4186ec9253))
+-   **tslint:** add support for tslint 6.0.x ([9f76097](https://github.com/NationalBankBelgium/code-style/commit/9f76097c97fd9172e5c5681dc8a16def508ec9f1))
+-   **tslint:** add support for tslint 6.1.x ([5400f64](https://github.com/NationalBankBelgium/code-style/commit/5400f6493ccce67f0dc1a5b5ce7e22a3f9b087ee)), closes [#15](https://github.com/NationalBankBelgium/code-style/issues/15)
 
 ## [1.1.1](https://github.com/NationalBankBelgium/code-style/compare/1.1.0...1.1.1) (2020-02-19)
 
 ### Bug Fixes
 
--   **stylelint:** disable incorrecly enabled stylelint rules from stylelint 10.0.x to 13.0.x ([4c9a213](https://github.com/NationalBankBelgium/code-style/commit/4c9a213)), closes [#32](https://github.com/NationalBankBelgium/code-style/issues/32)
-
-<a name="1.1.0"></a>
+-   **stylelint:** disable incorrecly enabled stylelint rules from stylelint 10.0.x to 13.0.x ([4c9a213](https://github.com/NationalBankBelgium/code-style/commit/4c9a213294cec17eded707fc2f411380a64e0398)), closes [#32](https://github.com/NationalBankBelgium/code-style/issues/32)
 
 # [1.1.0](https://github.com/NationalBankBelgium/code-style/compare/1.0.1...1.1.0) (2020-02-18)
 
 ### Bug Fixes
 
--   **stylelint:** remove wrong extend to "stylelint-config-prettier" in stylelint 9.10.x configuration.<br />The `stylelint/9.10.x` config was mistakenly extending from `stylelint-config-prettier` and therefore the `"extends": "stylelint-config-prettier"` has been removed from that config since `code-style` doesn't depend on such library in any way.<br />Please add that yourself in your stylelint config if necessary. ([d6e6431](https://github.com/NationalBankBelgium/code-style/commit/d6e6431)), closes [#17](https://github.com/NationalBankBelgium/code-style/issues/17)
--   **tslint:** remove the rules of TSLint v4.4+ from the 4.3.x subpackage ([33043da](https://github.com/NationalBankBelgium/code-style/commit/33043da)), closes [#14](https://github.com/NationalBankBelgium/code-style/issues/14)
+-   **stylelint:** remove wrong extend to "stylelint-config-prettier" in stylelint 9.10.x configuration.<br />The `stylelint/9.10.x` config was mistakenly extending from `stylelint-config-prettier` and therefore the `"extends": "stylelint-config-prettier"` has been removed from that config since `code-style` doesn't depend on such library in any way.<br />Please add that yourself in your stylelint config if necessary. ([d6e6431](https://github.com/NationalBankBelgium/code-style/commit/d6e64312e2696b738e6f0293511aa2bebc445328)), closes [#17](https://github.com/NationalBankBelgium/code-style/issues/17)
+-   **tslint:** remove the rules of TSLint v4.4+ from the 4.3.x subpackage ([33043da](https://github.com/NationalBankBelgium/code-style/commit/33043da212228b4b93008b10ed69817e785c79ad)), closes [#14](https://github.com/NationalBankBelgium/code-style/issues/14)
 
 ### Features
 
--   **codelyzer:** add support for codelyzer 5.0.x ([20c79a9](https://github.com/NationalBankBelgium/code-style/commit/20c79a9)), closes [/github.com/mgechev/codelyzer/blob/master/CHANGELOG.md#500-2019-03-27](https://github.com//github.com/mgechev/codelyzer/blob/master/CHANGELOG.md/issues/500-2019-03-27)
--   **codelyzer:** add support for codelyzer 5.1.x ([c27f57d](https://github.com/NationalBankBelgium/code-style/commit/c27f57d))
--   **codelyzer:** add support for codelyzer 5.2.x ([92d35bb](https://github.com/NationalBankBelgium/code-style/commit/92d35bb)), closes [#27](https://github.com/NationalBankBelgium/code-style/issues/27)
--   **stylelint:** add support for stylelint 10.0.x ([08955a5](https://github.com/NationalBankBelgium/code-style/commit/08955a5)), closes [#17](https://github.com/NationalBankBelgium/code-style/issues/17)
--   **stylelint:** add support for stylelint 10.1.x ([e6b09ae](https://github.com/NationalBankBelgium/code-style/commit/e6b09ae))
--   **stylelint:** add support for stylelint 11.0.x ([e8b102a](https://github.com/NationalBankBelgium/code-style/commit/e8b102a))
--   **stylelint:** add support for stylelint 11.1.x ([5698332](https://github.com/NationalBankBelgium/code-style/commit/5698332))
--   **stylelint:** add support for stylelint 12.0.x ([659f4b8](https://github.com/NationalBankBelgium/code-style/commit/659f4b8))
--   **stylelint:** add support for stylelint 13.0.x ([5be3092](https://github.com/NationalBankBelgium/code-style/commit/5be3092))
-
-<a name="1.0.1"></a>
+-   **codelyzer:** add support for codelyzer 5.0.x ([20c79a9](https://github.com/NationalBankBelgium/code-style/commit/20c79a965dd6ec09dd120dc0a6eb3234ff74e081)), closes [/github.com/mgechev/codelyzer/blob/master/CHANGELOG.md#500-2019-03-27](https://github.com//github.com/mgechev/codelyzer/blob/master/CHANGELOG.md/issues/500-2019-03-27)
+-   **codelyzer:** add support for codelyzer 5.1.x ([c27f57d](https://github.com/NationalBankBelgium/code-style/commit/c27f57dfd23580dc4670d8bcbe68fdd5be6ecca4))
+-   **codelyzer:** add support for codelyzer 5.2.x ([92d35bb](https://github.com/NationalBankBelgium/code-style/commit/92d35bb20ef8ce5be89d0b400d36cb55419038b2)), closes [#27](https://github.com/NationalBankBelgium/code-style/issues/27)
+-   **stylelint:** add support for stylelint 10.0.x ([08955a5](https://github.com/NationalBankBelgium/code-style/commit/08955a5a631ca67f3eb51bbf3898f0bda2580c95)), closes [#17](https://github.com/NationalBankBelgium/code-style/issues/17)
+-   **stylelint:** add support for stylelint 10.1.x ([e6b09ae](https://github.com/NationalBankBelgium/code-style/commit/e6b09ae38cebc0945e034b6bf10ed3e5aa1c2154))
+-   **stylelint:** add support for stylelint 11.0.x ([e8b102a](https://github.com/NationalBankBelgium/code-style/commit/e8b102a990acbd2089aaa627e4278a2e2f5d0444))
+-   **stylelint:** add support for stylelint 11.1.x ([5698332](https://github.com/NationalBankBelgium/code-style/commit/569833223f4b62c015a458dacb0f2b38d5277af4))
+-   **stylelint:** add support for stylelint 12.0.x ([659f4b8](https://github.com/NationalBankBelgium/code-style/commit/659f4b8f55b27e3f8b680f3371f7b2646c9d3d68))
+-   **stylelint:** add support for stylelint 13.0.x ([5be3092](https://github.com/NationalBankBelgium/code-style/commit/5be309245efd73489138df42fddd209b14196082))
 
 ## [1.0.1](https://github.com/NationalBankBelgium/code-style/compare/1.0.0...1.0.1) (2019-06-04)
 
 ### Bug Fixes
 
--   **tsconfig:** remove outDir, baseUrl, rootDir and typeRoots properties from tsconfig files ([4429a38](https://github.com/NationalBankBelgium/code-style/commit/4429a38)), closes [#10](https://github.com/NationalBankBelgium/code-style/issues/10)
-
-<a name="1.0.0"></a>
+-   **tsconfig:** remove outDir, baseUrl, rootDir and typeRoots properties from tsconfig files ([4429a38](https://github.com/NationalBankBelgium/code-style/commit/4429a38dbc89b808946b6c4a3dff0ac0850a5dfd)), closes [#10](https://github.com/NationalBankBelgium/code-style/issues/10)
 
 # [1.0.0](https://github.com/NationalBankBelgium/code-style/compare/1.0.0-rc.2...1.0.0) (2019-05-24)
 
 ### Bug Fixes
 
--   **stylelint:** comment unused rules ([4c5cbb4](https://github.com/NationalBankBelgium/code-style/commit/4c5cbb4))
--   **tsconfig:** wrong usage information in README for TS 3.1.x ([f9c5ea7](https://github.com/NationalBankBelgium/code-style/commit/f9c5ea7))
-
-<a name="1.0.0-rc.2"></a>
+-   **stylelint:** comment unused rules ([4c5cbb4](https://github.com/NationalBankBelgium/code-style/commit/4c5cbb4338fcbaf1bb378ce269aed477117cdda2))
+-   **tsconfig:** wrong usage information in README for TS 3.1.x ([f9c5ea7](https://github.com/NationalBankBelgium/code-style/commit/f9c5ea70fb38d678b4fd2fe6a127bd6b8a3ebfbf))
 
 # [1.0.0-rc.2](https://github.com/NationalBankBelgium/code-style/compare/1.0.0-rc.1...1.0.0-rc.2) (2019-05-20)
 
 ### Bug Fixes
 
--   **build:** fix travis branches to be able to trigger the release process when there is a tag ([f688d48](https://github.com/NationalBankBelgium/code-style/commit/f688d48))
-
-<a name="1.0.0-rc.1"></a>
+-   **build:** fix travis branches to be able to trigger the release process when there is a tag ([f688d48](https://github.com/NationalBankBelgium/code-style/commit/f688d48ab119914648fdc249f865cd81e8d14e68))
 
 # [1.0.0-rc.1](https://github.com/NationalBankBelgium/code-style/compare/1.0.0-rc.0...1.0.0-rc.1) (2019-05-20)
 
 ### Bug Fixes
 
--   **release:** fix expected node version to 10 instead of 8 ([36a70bd](https://github.com/NationalBankBelgium/code-style/commit/36a70bd))
+-   **release:** fix expected node version to 10 instead of 8 ([36a70bd](https://github.com/NationalBankBelgium/code-style/commit/36a70bd63ca838ef0f1115af023529b3d8ae0343))
 
-<a name="1.0.0-rc.0"></a>
-
-# [1.0.0-rc.0](https://github.com/NationalBankBelgium/code-style/compare/b0c2f73...1.0.0-rc.0) (2019-05-20)
+# [1.0.0-rc.0](https://github.com/NationalBankBelgium/code-style/compare/b0c2f73d966e9aae920f171a3e00662e8ba60ae5...1.0.0-rc.0) (2019-05-20)
 
 ### Bug Fixes
 
--   **release:** adapt release-it config to remove/fix deprecated options as from version 10 ([afae9e2](https://github.com/NationalBankBelgium/code-style/commit/afae9e2))
+-   **release:** adapt release-it config to remove/fix deprecated options as from version 10 ([afae9e2](https://github.com/NationalBankBelgium/code-style/commit/afae9e246078e0e959454af338919794c9ee6676))
 
 ### Features
 
--   **all:** update copyright year in LICENSE + add comment in tslint-codelyzer ([b0c2f73](https://github.com/NationalBankBelgium/code-style/commit/b0c2f73))
+-   **all:** update copyright year in LICENSE + add comment in tslint-codelyzer ([b0c2f73](https://github.com/NationalBankBelgium/code-style/commit/b0c2f73d966e9aae920f171a3e00662e8ba60ae5))
