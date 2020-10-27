@@ -17,6 +17,8 @@ The following versions are available (based on **TypeScript** version and **Angu
 -   3.4.x and Angular 8 - `@nationalbankbelgium/code-style/tsconfig/3.4.x/ng8`
 -   3.5.x - `@nationalbankbelgium/code-style/tsconfig/3.5.x`
 -   3.5.x and Angular >= 8.2.0 - `@nationalbankbelgium/code-style/tsconfig/3.5.x/ng8`
+-   3.6.x - `@nationalbankbelgium/code-style/tsconfig/3.6.x`
+-   3.6.x and Angular 9 - `@nationalbankbelgium/code-style/tsconfig/3.6.x/ng9`
 
 ## Usage
 
@@ -26,7 +28,7 @@ For TypeScript >= 3.2
 
 ```text
 {
-	"extends": "@nationalbankbelgium/code-style/tsconfig/3.5.x",
+	"extends": "@nationalbankbelgium/code-style/tsconfig/3.6.x",
 	"compilerOptions": {
 		// your configuration
 	}
