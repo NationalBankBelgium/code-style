@@ -42,7 +42,7 @@
     "husky": "^4.2.1",
     "lint-staged": "^10.0.7",
     "prettier": "~1.16.1",
-    "release-it": "^13.5.2",
+    "release-it": "^14.2.0",
     "stylelint": "~13.3.1",
     "tslint": "~6.1.0",
     "typescript": "~3.2.4"
