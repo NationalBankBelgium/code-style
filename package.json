@@ -41,6 +41,7 @@
     "cz-customizable": "^6.2.0",
     "husky": "^5.0.9",
     "lint-staged": "^10.0.7",
+    "pinst": "^2.1.4",
     "prettier": "~1.16.1",
     "release-it": "^14.2.0",
     "stylelint": "~13.3.1",
@@ -54,18 +55,19 @@
     "clean:modules": "npx rimraf ./node_modules package-lock.json",
     "clean:slate": "npm run clean:modules && npm install",
     "commit": "./node_modules/.bin/git-cz",
+    "commitlint": "commitlint",
     "generate:changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "generate:changelog-recent": "conventional-changelog -p angular | tail -n +3",
+    "lint-staged": "lint-staged",
+    "postinstall": "husky install",
+    "prepack": "pinst --disable",
+    "prepublishOnly": "pinst --disable",
+    "postpack": "pinst --enable",
+    "postpublish": "pinst --enable",
     "prettier-check": "prettier \"**/*.{css,html,js,json,md,pcss,scss,ts,yml}\" --write --html-whitespace-sensitivity strict",
     "release": "release-it",
     "release:publish": "bash ./release-publish.sh --trace",
     "test": "bash ./test.sh"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "lint-staged"
-    }
   },
   "lint-staged": {
     "*.{css,html,js,json,md,pcss,scss,ts,yml}": [
