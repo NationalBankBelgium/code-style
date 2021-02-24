@@ -1,3 +1,22 @@
+# [1.3.0](https://github.com/NationalBankBelgium/code-style/compare/1.2.0...1.3.0) (2021-02-24)
+
+### Bug Fixes
+
+-   **tsconfig:** fix wrong paths under ng7 folders. Replaced `-` by `/` ([16e3847](https://github.com/NationalBankBelgium/code-style/commit/16e38476535e0125a55cdd4a5c696a1e2be1d361))
+
+### Features
+
+-   **prettier:** add support for prettier 1.17.x ([54e5f3e](https://github.com/NationalBankBelgium/code-style/commit/54e5f3e0e4b0145bbf174099276a7d879adce8f9))
+-   **prettier:** add support for prettier 1.18.x ([551fc07](https://github.com/NationalBankBelgium/code-style/commit/551fc07d7f6968bb72d66837531a033d44ec20ef))
+-   **prettier:** add support for prettier 1.19.x ([bec231a](https://github.com/NationalBankBelgium/code-style/commit/bec231ac475bdc7b452d1d7ef23c5141a71e13b5))
+-   **prettier:** add support for prettier 2.0.x ([fc40e1e](https://github.com/NationalBankBelgium/code-style/commit/fc40e1e5ac99f554e812c9c6adc7cda354d365b5)), closes [#13](https://github.com/NationalBankBelgium/code-style/issues/13)
+-   **tsconfig:** add support for typescript 3.3.x ([4f10aae](https://github.com/NationalBankBelgium/code-style/commit/4f10aae00378e5ea2446ff0c81262306844403bc)), closes [#142](https://github.com/NationalBankBelgium/code-style/issues/142)
+-   **tsconfig:** add support for typescript 3.4.x and angular 8 ([637cd4d](https://github.com/NationalBankBelgium/code-style/commit/637cd4df76be9c9b26ce3c6a1b88047a0e7f43ce)), closes [#142](https://github.com/NationalBankBelgium/code-style/issues/142)
+-   **tsconfig:** add support for typescript 3.5.x and angular 8 ([978b8f3](https://github.com/NationalBankBelgium/code-style/commit/978b8f34e617e20f37d7541fa21152bf399f7752))
+-   **tsconfig:** add support for typescript 3.6.x and angular 9 ([9c98cde](https://github.com/NationalBankBelgium/code-style/commit/9c98cde7129c31cc32782fb98341266375b256f2))
+-   **tsconfig:** add support for typescript 3.7.x and angular 9 ([4977f28](https://github.com/NationalBankBelgium/code-style/commit/4977f28d60a9640da348cceb168365e24279d8ae))
+-   **tsconfig:** add support for typescript 3.8.x and angular 9 ([e8aa9ce](https://github.com/NationalBankBelgium/code-style/commit/e8aa9ce199e0573db544798f8da3d2d6f53c19e7))
+
 # [1.2.0](https://github.com/NationalBankBelgium/code-style/compare/1.1.1...1.2.0) (2020-06-26)
 
 ### Bug Fixes
@@ -22,16 +41,11 @@
 -   **tslint:** add support for tslint 6.0.x ([9f76097](https://github.com/NationalBankBelgium/code-style/commit/9f76097c97fd9172e5c5681dc8a16def508ec9f1))
 -   **tslint:** add support for tslint 6.1.x ([5400f64](https://github.com/NationalBankBelgium/code-style/commit/5400f6493ccce67f0dc1a5b5ce7e22a3f9b087ee)), closes [#15](https://github.com/NationalBankBelgium/code-style/issues/15)
 
-## [1.1.1](https://github.com/NationalBankBelgium/code-style/compare/1.1.0...1.1.1) (2020-02-19)
+## [1.1.1](https://github.com/NationalBankBelgium/code-style/compare/1.0.1...1.1.1) (2020-02-19)
 
 ### Bug Fixes
 
 -   **stylelint:** disable incorrecly enabled stylelint rules from stylelint 10.0.x to 13.0.x ([4c9a213](https://github.com/NationalBankBelgium/code-style/commit/4c9a213294cec17eded707fc2f411380a64e0398)), closes [#32](https://github.com/NationalBankBelgium/code-style/issues/32)
-
-# [1.1.0](https://github.com/NationalBankBelgium/code-style/compare/1.0.1...1.1.0) (2020-02-18)
-
-### Bug Fixes
-
 -   **stylelint:** remove wrong extend to "stylelint-config-prettier" in stylelint 9.10.x configuration.<br />The `stylelint/9.10.x` config was mistakenly extending from `stylelint-config-prettier` and therefore the `"extends": "stylelint-config-prettier"` has been removed from that config since `code-style` doesn't depend on such library in any way.<br />Please add that yourself in your stylelint config if necessary. ([d6e6431](https://github.com/NationalBankBelgium/code-style/commit/d6e64312e2696b738e6f0293511aa2bebc445328)), closes [#17](https://github.com/NationalBankBelgium/code-style/issues/17)
 -   **tslint:** remove the rules of TSLint v4.4+ from the 4.3.x subpackage ([33043da](https://github.com/NationalBankBelgium/code-style/commit/33043da212228b4b93008b10ed69817e785c79ad)), closes [#14](https://github.com/NationalBankBelgium/code-style/issues/14)
 
