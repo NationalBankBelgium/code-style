@@ -17,11 +17,13 @@ This package hosts style configuration useful in Front-End development at the [N
 
 It currently provides the following configurations:
 
--   [codelyzer](https://github.com/mgechev/codelyzer): in [lib/codelyzer](/lib/codelyzer/README.md)
--   [Prettier](https://github.com/prettier/prettier): in [lib/prettier](/lib/prettier/README.md)
--   [stylelint](https://github.com/stylelint/stylelint): in [lib/stylelint](/lib/stylelint/README.md)
--   [TSLint](https://github.com/palantir/tslint): in [lib/tslint](/lib/tslint/README.md)
--   [Typescript](https://github.com/microsoft/typescript): in [lib/tsconfig](/lib/tsconfig/README.md)
+| Library                                               | Path                                      | Latest supported version                                                                                            |
+| ----------------------------------------------------- | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| [codelyzer](https://github.com/mgechev/codelyzer)     | [lib/codelyzer](/lib/codelyzer/README.md) | ![codelyzer version](https://img.shields.io/npm/dependency-version/@nationalbankbelgium/code-style/dev/codelyzer)   |
+| [Prettier](https://github.com/prettier/prettier)      | [lib/prettier](/lib/prettier/README.md)   | ![Prettier version](https://img.shields.io/npm/dependency-version/@nationalbankbelgium/code-style/dev/prettier)     |
+| [stylelint](https://github.com/stylelint/stylelint)   | [lib/stylelint](/lib/stylelint/README.md) | ![stylelint version](https://img.shields.io/npm/dependency-version/@nationalbankbelgium/code-style/dev/stylelint)   |
+| [TSLint](https://github.com/palantir/tslint)          | [lib/tslint](/lib/tslint/README.md)       | ![TSLint version](https://img.shields.io/npm/dependency-version/@nationalbankbelgium/code-style/dev/tslint)         |
+| [Typescript](https://github.com/microsoft/typescript) | [lib/tsconfig](/lib/tsconfig/README.md)   | ![Typescript version](https://img.shields.io/npm/dependency-version/@nationalbankbelgium/code-style/dev/typescript) |
 
 ## Installation
 
