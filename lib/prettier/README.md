@@ -8,18 +8,19 @@ This sub-package hosts the [Prettier](https://prettier.io) configuration.
 
 The following versions are available (based on **Prettier** version):
 
--   1.16.x - `@nationalbankbelgium/code-style/prettier/1.16.x`
--   1.17.x - `@nationalbankbelgium/code-style/prettier/1.17.x`
--   1.18.x - `@nationalbankbelgium/code-style/prettier/1.18.x`
--   1.19.x - `@nationalbankbelgium/code-style/prettier/1.19.x`
--   2.0.x - `@nationalbankbelgium/code-style/prettier/2.0.x`
+- 1.16.x - `@nationalbankbelgium/code-style/prettier/1.16.x`
+- 1.17.x - `@nationalbankbelgium/code-style/prettier/1.17.x`
+- 1.18.x - `@nationalbankbelgium/code-style/prettier/1.18.x`
+- 1.19.x - `@nationalbankbelgium/code-style/prettier/1.19.x`
+- 2.0.x - `@nationalbankbelgium/code-style/prettier/2.0.x`
+- 2.1.x - `@nationalbankbelgium/code-style/prettier/2.1.x`
 
 ## Usage
 
 Create a `.prettierrc.js` file and copy the following content inside:
 
 ```js
-module.exports = require("@nationalbankbelgium/code-style/prettier/2.0.x");
+module.exports = require("@nationalbankbelgium/code-style/prettier/2.1.x");
 ```
 
 ## Recommended Additional Configs
