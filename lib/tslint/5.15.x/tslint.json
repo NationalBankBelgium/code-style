@@ -14,7 +14,7 @@
     "no-namespace": [true, "allow-declarations"],
     "no-reference": true,
     "no-var-requires": false,
-    "typedef": [true, "call-signature", "arrow-call-signature", "parameter", "arrow-parameter", "property-declaration"],
+    "typedef": [true, "call-signature", "parameter", "arrow-parameter", "property-declaration"],
     "typedef-whitespace": [
       false,
       {
