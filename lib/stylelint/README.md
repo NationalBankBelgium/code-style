@@ -23,6 +23,7 @@ The following versions are available (based on **stylelint** version):
 - 13.6.x - `@nationalbankbelgium/code-style/stylelint/13.6.x`
 - 13.7.x - `@nationalbankbelgium/code-style/stylelint/13.7.x`
 - 13.8.x - `@nationalbankbelgium/code-style/stylelint/13.8.x`
+- 13.9.x - `@nationalbankbelgium/code-style/stylelint/13.9.x`
 
 ## Usage
 
@@ -30,7 +31,7 @@ Adapt the content of your `.stylelintrc` file as follows:
 
 ```text
 {
-	"extends": "@nationalbankbelgium/code-style/stylelint/13.8.x",
+	"extends": "@nationalbankbelgium/code-style/stylelint/13.9.x",
 	"rules": {
 		// your rules
 	}
