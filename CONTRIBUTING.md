@@ -17,9 +17,9 @@ Ask questions on [Stack Overflow](https://stackoverflow.com/questions/tagged/nbb
 
 Stack Overflow is a much better place to ask questions since:
 
--   there are thousands of people willing to help on Stack Overflow
--   questions and answers stay available for public viewing so your question / answer might help someone else
--   Stack Overflow's voting system assures that the best answers are prominently visible.
+- there are thousands of people willing to help on Stack Overflow
+- questions and answers stay available for public viewing so your question / answer might help someone else
+- Stack Overflow's voting system assures that the best answers are prominently visible.
 
 You may also create GH issues with the "question" label. We'll do our best to help.
 
@@ -45,9 +45,9 @@ Before you submit an issue, please search the issue tracker, maybe an issue for 
 We want to fix all the issues as soon as possible, but before fixing a bug we need to reproduce and confirm it. In order to reproduce bugs, we will systematically ask you to provide a minimal reproduction scenario using [Plunker](https://plnkr.co).
 Having a live, reproducible scenario gives us a wealth of important information without going back & forth to you with additional questions like:
 
--   version of code-style & styling/linting tool used
--   3rd party libraries and their versions
--   and most importantly, a use-case that fails
+- version of code-style & styling/linting tool used
+- 3rd party libraries and their versions
+- and most importantly, a use-case that fails
 
 A minimal reproduce scenario allows us to quickly confirm a bug (or point out coding problem) as well as confirm that we are fixing the right problem. If plunker is not a suitable way to demonstrate the problem (for example for issues related to our npm packaging), please create a standalone git repository demonstrating the problem.
 
@@ -67,10 +67,10 @@ We heavily recommend using the "GitFlow" workflow (see workflow section below) w
 
 Once you're found what you want to contribute to code-style, then:
 
--   Create a feature branch in your fork: `git checkout -b my-new-branch master`
--   Configure the upstream
-    -   `git remote add upstream https://github.com/NationalBankBelgium/code-style.git`
-    -   reference: https://help.github.com/articles/configuring-a-remote-for-a-fork/
+- Create a feature branch in your fork: `git checkout -b my-new-branch master`
+- Configure the upstream
+  - `git remote add upstream https://github.com/NationalBankBelgium/code-style.git`
+  - reference: https://help.github.com/articles/configuring-a-remote-for-a-fork/
 
 From then on, you may work on your feature at your own rhythm and commit/push to your fork.
 
@@ -82,18 +82,18 @@ While you're busy developing your feature and before you propose them, make sure
 
 First, download the latest commits:
 
--   `git fetch upstream`
--   or `git remote update -p`
+- `git fetch upstream`
+- or `git remote update -p`
 
 Then, integrate those changes to your fork (whatever branch you're working on).
 
 First try a fast-forward merge: `git merge --ff-only upstream/master`
 
--   that command tells git to merge the upstream branch ONLY if you local branch can be "fast forwarded" to the upstream branch (i.e., if it hasn't diverged)
+- that command tells git to merge the upstream branch ONLY if you local branch can be "fast forwarded" to the upstream branch (i.e., if it hasn't diverged)
 
 If the fast-forward merge fails, then you'll have to rebase with the upstream (i.e., align): `git rebase -p upstream/master`
 
--   the `-p` options tells git to preserve merges. This prevents git from linearizing the commits being rebased
+- the `-p` options tells git to preserve merges. This prevents git from linearizing the commits being rebased
 
 Once done, make sure the history looks like what you expect: `git log --graph --oneline --decorate --date-order --color --boundary upstream/master`
 
@@ -101,8 +101,8 @@ Certainly so before creating a Pull Request (PR). If you don't do it then we'll 
 
 References
 
--   https://stackoverflow.com/questions/6406762/why-am-i-merging-remote-tracking-branch-origin-develop-into-develop
--   https://help.github.com/articles/syncing-a-fork/
+- https://stackoverflow.com/questions/6406762/why-am-i-merging-remote-tracking-branch-origin-develop-into-develop
+- https://help.github.com/articles/syncing-a-fork/
 
 ### Proposing your changes by submitting a Pull Request (PR)
 
@@ -140,73 +140,73 @@ You'll notice that we sometimes give a `git flow ...` command and alternative co
 
 Workflow and commands:
 
--   fork: through GitHub
--   clone: `git clone https://github.com/<username>/code-style`
--   add upstream: `git remote add upstream https://github.com/NationalBankBelgium/code-style`
-    -   that way you can fetch new commits that have been integrated into code-style's main repository
--   initialize git flow: `git flow init -d`
-    -   you now have a develop branch
-    -   -d for default branch names (develop, master, feature/, release/, hotfix/)
--   push your local develop branch to your fork
-    -   `git checkout develop`
-    -   `git push -u origin develop`
-    -   that you can integrate anything you like on your fork's develop branch (e.g., for integration checks)
--   create a feature branch for whatever you want to work on
-    -   `git flow feature start <name>`
-    -   alternative: `git checkout -b feature/<name>`
-    -   you may include a specific issue number in the branch name (e.g., 24-awesome-feature)
--   publish the feature branch on your fork
-    -   `git flow feature publish <name>`
-    -   alternative: `git push -u origin feature/<name>`
--   work on your feature branch
-    -   checkout the branch: `git checkout feature/<name>`
-    -   make changes: `git add ...` then `git commit -m '...'`
-    -   regularly commit the changes: `git commit -a -m 'refactor(directive): made it great again'`
--   push the changes to your fork's corresponding feature branch: `git push`
--   update your fork/feature branch with upstream changes
-    -   first fetch the changes: `git fetch upstream`
-        -   alternative: `git remote update -p`
-    -   then merge or rebase
-        -   try fast-forward merge: `git merge --ff-only upstream/master`
-        -   rebase if fast-forward failed: `git rebase -p upstream/master`
-    -   see "Keeping in sync" section for details!
--   create your Pull Request (PR); see "Proposing your changes by submitting a Pull Request (PR)" for details
+- fork: through GitHub
+- clone: `git clone https://github.com/<username>/code-style`
+- add upstream: `git remote add upstream https://github.com/NationalBankBelgium/code-style`
+  - that way you can fetch new commits that have been integrated into code-style's main repository
+- initialize git flow: `git flow init -d`
+  - you now have a develop branch
+  - -d for default branch names (develop, master, feature/, release/, hotfix/)
+- push your local develop branch to your fork
+  - `git checkout develop`
+  - `git push -u origin develop`
+  - that you can integrate anything you like on your fork's develop branch (e.g., for integration checks)
+- create a feature branch for whatever you want to work on
+  - `git flow feature start <name>`
+  - alternative: `git checkout -b feature/<name>`
+  - you may include a specific issue number in the branch name (e.g., 24-awesome-feature)
+- publish the feature branch on your fork
+  - `git flow feature publish <name>`
+  - alternative: `git push -u origin feature/<name>`
+- work on your feature branch
+  - checkout the branch: `git checkout feature/<name>`
+  - make changes: `git add ...` then `git commit -m '...'`
+  - regularly commit the changes: `git commit -a -m 'refactor(directive): made it great again'`
+- push the changes to your fork's corresponding feature branch: `git push`
+- update your fork/feature branch with upstream changes
+  - first fetch the changes: `git fetch upstream`
+    - alternative: `git remote update -p`
+  - then merge or rebase
+    - try fast-forward merge: `git merge --ff-only upstream/master`
+    - rebase if fast-forward failed: `git rebase -p upstream/master`
+  - see "Keeping in sync" section for details!
+- create your Pull Request (PR); see "Proposing your changes by submitting a Pull Request (PR)" for details
 
 Sometimes you might want to work with others on some feature.
 
 If you're the one others will collaborate with, then make sure to publish your feature branch on your fork:
 
--   create a feature branch to work on changes for that feature: `git flow feature start <name>`
--   publish the feature branch on your fork: `git flow feature publish <name>`
--   make changes: `git add ...` then `git commit -m '...'`
--   push the changes to your fork's corresponding feature branch: `git push`
+- create a feature branch to work on changes for that feature: `git flow feature start <name>`
+- publish the feature branch on your fork: `git flow feature publish <name>`
+- make changes: `git add ...` then `git commit -m '...'`
+- push the changes to your fork's corresponding feature branch: `git push`
 
 If you're helping another developer implement a feature, then, assuming he has published his feature branch on his fork:
 
--   add the other developer's fork as a remote: `git remote add <username> https://github.com/<username>/code-style`
--   fetch his changes: `git fetch <username>`
--   create your own corresponding feature branch; assuming he has created `<username>/feature/<name>` then
-    -   `git checkout -b <name> feature/<name>`
--   publish your version of the feature branch on your fork
-    -   `git flow feature publish <name>`
-    -   alternative: `git push -u origin feature/<name>`
--   make changes
--   push the changes to your fork's corresponding feature branch
--   create PRs towards the other developer's repository for him to integrate your changes
--   once they merge your PR, you should remove your feature branch and forget about it: `git branch -d feature/<name>`
+- add the other developer's fork as a remote: `git remote add <username> https://github.com/<username>/code-style`
+- fetch his changes: `git fetch <username>`
+- create your own corresponding feature branch; assuming he has created `<username>/feature/<name>` then
+  - `git checkout -b <name> feature/<name>`
+- publish your version of the feature branch on your fork
+  - `git flow feature publish <name>`
+  - alternative: `git push -u origin feature/<name>`
+- make changes
+- push the changes to your fork's corresponding feature branch
+- create PRs towards the other developer's repository for him to integrate your changes
+- once they merge your PR, you should remove your feature branch and forget about it: `git branch -d feature/<name>`
 
 An alternative to the above is for the other developer to give you write access to his fork; there the issue is if he does a rebase on his fork; in that case you'll have issues.
 If you go that way then you have to:
 
--   clone the repository of the other developer or just checkout the other developer's feature branch to work on it: `git checkout -b workflow <username>/feature/<name>`
--   make changes
--   push the changes
--   sync your local repo with the main repository of code-style
--   create PRs against the main repository of code-style (or let the other developer do it)
+- clone the repository of the other developer or just checkout the other developer's feature branch to work on it: `git checkout -b workflow <username>/feature/<name>`
+- make changes
+- push the changes
+- sync your local repo with the main repository of code-style
+- create PRs against the main repository of code-style (or let the other developer do it)
 
 In any case, after PRs are merged into code-style, you can normally forget about the feature branches and delete those to keep your fork clean
 
--   `git branch -d feature/<name>`
+- `git branch -d feature/<name>`
 
 _It's important to keep in mind that anytime you want to continue working on an ongoing feature branch or start a new one, you'll need to fetch from upstream and merge (fast-forward) or rebase. Without this, you'll quickly fall out of sync and end up with nightmarish merges..._
 
@@ -222,15 +222,15 @@ TODO add project structure details
 
 If you want to build code-style from source, you need to...
 
--   install NodeJS (8.0.0+) and npm (5.6.0+)
--   clone this git repository: `git clone https://github.com/NationalBankBelgium/code-style.git`
--   run `npm run install` from the root directory of code-style
+- install NodeJS (12.0.0+) and npm (7.0.0+)
+- clone this git repository: `git clone https://github.com/NationalBankBelgium/code-style.git`
+- run `npm run install` from the root directory of code-style
 
 ### Executing code-style's main build script
 
 Anytime you make modifications to the code-style library, you'll need to
 
--   execute `npm run build` from the root directory of code-style
+- execute `npm run build` from the root directory of code-style
 
 That command will then build code-style using the [build script](/build.sh).
 
@@ -238,10 +238,10 @@ That command will then build code-style using the [build script](/build.sh).
 
 If you want to modify the code-style library:
 
--   go to the package folder. `cd packages/<name>`
--   install its dependencies: `npm install`
--   make your changes
--   execute `npm run build` at code-style's root
+- go to the package folder. `cd packages/<name>`
+- install its dependencies: `npm install`
+- make your changes
+- execute `npm run build` at code-style's root
 
 Start hacking :)
 
@@ -256,13 +256,13 @@ You can execute the tests for the code-style library using the following command
 
 If you want to clean up the generated dist folder, you can
 
--   execute the `clean` npm script
+- execute the `clean` npm script
 
 ### Cleaning up node_modules folder and package-lock.json
 
 If you want to clean up completely the installed _node_modules_ and reinstall later on from scratch (without the package-lock.json file), you can
 
--   execute the `clean:modules` npm script
+- execute the `clean:modules` npm script
 
 ## Releasing a version
 
@@ -279,30 +279,30 @@ We're using Angular's commit message format: `type(scope): subject`
 
 Must be one of the following:
 
--   **feat**: A new feature
--   **fix**: A bug fix
--   **docs**: Documentation only changes
--   **style**: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
--   **refactor**: A code change that neither fixes a bug nor adds a feature
--   **perf**: A code change that improves performance
--   **test**: Adding missing tests or correcting existing tests
--   **build**: Changes that affect the build system or external dependencies
--   **ci**: Changes to our CI configuration files and scripts
--   **chore**: Changes to the build process or auxiliary tools and libraries such as documentation generation
--   **revert**: Reverts a previous commit
+- **feat**: A new feature
+- **fix**: A bug fix
+- **docs**: Documentation only changes
+- **style**: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+- **refactor**: A code change that neither fixes a bug nor adds a feature
+- **perf**: A code change that improves performance
+- **test**: Adding missing tests or correcting existing tests
+- **build**: Changes that affect the build system or external dependencies
+- **ci**: Changes to our CI configuration files and scripts
+- **chore**: Changes to the build process or auxiliary tools and libraries such as documentation generation
+- **revert**: Reverts a previous commit
 
 #### Scope
 
 Must be one of the following:
 
--   **all**
--   **build**
--   **docs**
--   **prettier**
--   **release**
--   **stylelint**
--   **tsconfig**
--   **tslint**
+- **all**
+- **build**
+- **docs**
+- **prettier**
+- **release**
+- **stylelint**
+- **tsconfig**
+- **tslint**
 
 If the scope you want to specify is not in the list, you can ask to add it or add it in the commitlint
 configuration file (`commitlint.config.js`) in the root.
@@ -311,12 +311,12 @@ configuration file (`commitlint.config.js`) in the root.
 
 The subject contains succinct description of the change:
 
--   use the imperative, present tense: "change" not "changed" nor "changes"
--   do not capitalize first letter
--   do not place a period `.` at the end
--   entire length of the commit message must not go over 50 characters
--   describe what the commit does, not what issue it relates to or fixes
--   **be brief, yet descriptive** - we should have a good understanding of what the commit does by reading the subject
+- use the imperative, present tense: "change" not "changed" nor "changes"
+- do not capitalize first letter
+- do not place a period `.` at the end
+- entire length of the commit message must not go over 50 characters
+- describe what the commit does, not what issue it relates to or fixes
+- **be brief, yet descriptive** - we should have a good understanding of what the commit does by reading the subject
 
 ### Body
 

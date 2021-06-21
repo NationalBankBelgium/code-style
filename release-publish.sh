@@ -32,7 +32,6 @@ NPM_TOKEN=${NPM_TOKEN:-""}
 #NPM_TOKEN="dummy"
 #GITHUB_ACTIONS=true
 #GITHUB_REPOSITORY="NationalBankBelgium/code-style"
-#GH_ACTIONS_NODE_VERSION="10"
 #GITHUB_EVENT_NAME="push"
 
 # For normal builds:
@@ -96,15 +95,7 @@ if [[ ${GITHUB_ACTIONS} == true ]]; then
     ghActionsGroupEnd "publish checks"
     exit 0;
   fi
-  
-  # Ensuring that this is the execution for Node x
-  # Without this check, we would publish a release for each node version we test under! :)
-  if [[ ${GH_ACTIONS_NODE_VERSION} != ${EXPECTED_NODE_VERSION} ]]; then
-    logInfo "Skipping release because this is not the expected version of node: ${GH_ACTIONS_NODE_VERSION}"
-    ghActionsGroupEnd "publish checks"
-    exit 0;
-  fi
-  
+
   logInfo "Verifying if this build has been triggered for a tag" 
   
   if [[ ${GITHUB_EVENT_NAME} == "pull_request" ]]; then

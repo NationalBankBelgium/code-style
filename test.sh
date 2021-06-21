@@ -124,8 +124,8 @@ do
   TEMP_CONFIG_TSCONFIG="${testFolder}/tsconfig-test-file-${TSCONFIG_VERSION}.json"
   logDebug "create temporary tsconfig file: ${TEMP_CONFIG_TSCONFIG}"
   echo "{\"extends\":\"../../lib/tsconfig/${TSCONFIG_VERSION}/tsconfig.json\",\"compilerOptions\":{\"baseUrl\":\".\"}}" > ${TEMP_CONFIG_TSCONFIG}
-  logDebug "run command \"npx typescript@${TSCONFIG_VERSION} -p ${TEMP_CONFIG_TSCONFIG}\""
-  npx typescript@${TSCONFIG_VERSION} -p ${TEMP_CONFIG_TSCONFIG}
+  logDebug "run command \"npx -p typescript@${TSCONFIG_VERSION} -c 'tsc -p ${TEMP_CONFIG_TSCONFIG}'\""
+  npx -p typescript@${TSCONFIG_VERSION} -c "tsc -p ${TEMP_CONFIG_TSCONFIG}"
   ghActionsGroupEnd "validate tsconfig ${TSCONFIG_VERSION}"
 done
 
