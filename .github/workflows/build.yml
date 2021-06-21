@@ -16,19 +16,19 @@ jobs:
     name: Test, Build & Release
     runs-on: "ubuntu-latest"
     env:
-      GH_ACTIONS_NODE_VERSION: "10"
       LOGS_DIR: /tmp/code-style/logs
       LOGS_FILE: /tmp/code-style/logs/build-perf.log
+      NPM_VERSION: "7.x"
       TZ: "Europe/Brussels"
     steps:
       # See: https://github.com/marketplace/actions/checkout
       - uses: actions/checkout@v2
 
       # See: https://github.com/marketplace/actions/setup-node-js-for-use-with-actions
-      - name: Use Node.js 10
+      - name: Use Node.js 12
         uses: actions/setup-node@v1
         with:
-          node-version: "10"
+          node-version: "12"
 
       - name: Create file & folder for GitHub Actions logs
         run: |
@@ -50,7 +50,7 @@ jobs:
           echo "Author      : ${GITHUB_ACTOR}"
           NODE_VERSION="$(node -v)"
           echo "Node version: $NODE_VERSION"
-          npm i -g npm@6.9.2
+          npm i -g npm@${NPM_VERSION}
           # This ensures that we are authenticated without requiring to have an actual .npmrc file within the project
           echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" >> ~/.npmrc
         env:
