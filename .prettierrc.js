@@ -1,1 +1,1 @@
-module.exports = require("./lib/prettier/2.2.x/.prettierrc.js");
+module.exports = require("./lib/prettier/2.3.x/.prettierrc.js");

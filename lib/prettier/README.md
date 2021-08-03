@@ -15,13 +15,14 @@ The following versions are available (based on **Prettier** version):
 - 2.0.x - `@nationalbankbelgium/code-style/prettier/2.0.x`
 - 2.1.x - `@nationalbankbelgium/code-style/prettier/2.1.x`
 - 2.2.x - `@nationalbankbelgium/code-style/prettier/2.2.x`
+- 2.3.x - `@nationalbankbelgium/code-style/prettier/2.3.x`
 
 ## Usage
 
 Create a `.prettierrc.js` file and copy the following content inside:
 
 ```js
-module.exports = require("@nationalbankbelgium/code-style/prettier/2.2.x");
+module.exports = require("@nationalbankbelgium/code-style/prettier/2.3.x");
 ```
 
 ## Recommended Additional Configs
