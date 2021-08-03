@@ -31,6 +31,8 @@ The following versions are available (based on **TypeScript** version and **Angu
 - 4.1.x and Angular 11 - `@nationalbankbelgium/code-style/tsconfig/4.1.x/ng11`
 - 4.2.x - `@nationalbankbelgium/code-style/tsconfig/4.2.x`
 - 4.2.x and Angular 12 - `@nationalbankbelgium/code-style/tsconfig/4.2.x/ng12`
+- 4.3.x - `@nationalbankbelgium/code-style/tsconfig/4.3.x`
+- 4.3.x and Angular >= 12.1.0 - `@nationalbankbelgium/code-style/tsconfig/4.3.x/ng12`
 
 ## Usage
 
@@ -40,7 +42,7 @@ For TypeScript >= 3.2
 
 ```text
 {
-	"extends": "@nationalbankbelgium/code-style/tsconfig/4.2.x",
+	"extends": "@nationalbankbelgium/code-style/tsconfig/4.3.x",
 	"compilerOptions": {
 		// your configuration
 	}
