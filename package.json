@@ -32,7 +32,7 @@
     "tsconfig"
   ],
   "devDependencies": {
-    "@commitlint/cli": "^16.2.1",
+    "@commitlint/cli": "^17.4.1",
     "@commitlint/config-conventional": "^16.2.1",
     "@release-it/conventional-changelog": "^4.2.1",
     "codelyzer": "~6.0.2",
