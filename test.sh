@@ -67,8 +67,8 @@ do
   TEMP_CONFIG_PRETTIER="${testFolder}/prettier-test-file-${PRETTIER_VERSION}.js"
   logDebug "create temporary prettier config file: ${TEMP_CONFIG_PRETTIER}"
   echo "module.exports=require('../../lib/prettier/${PRETTIER_VERSION}/.prettierrc.js');" > ${TEMP_CONFIG_PRETTIER}
-  logDebug "run command \"npx prettier@${PRETTIER_VERSION} --config ${TEMP_CONFIG_PRETTIER} --write ${TEMP_TEST_PRETTIER}\""
-  testResult=$(npx prettier@${PRETTIER_VERSION} --config ${TEMP_CONFIG_PRETTIER} --write ${TEMP_TEST_PRETTIER} 2>&1)
+  logDebug "run command \"npx --yes prettier@${PRETTIER_VERSION} --config ${TEMP_CONFIG_PRETTIER} --write ${TEMP_TEST_PRETTIER}\""
+  testResult=$(npx --yes prettier@${PRETTIER_VERSION} --config ${TEMP_CONFIG_PRETTIER} --write ${TEMP_TEST_PRETTIER} 2>&1)
   if [[ ${testResult} == *"[warn] Ignored unknown"* ]]; then
     logInfo "The prettier configuration contains unknown rules"
     die ${testResult}
@@ -97,8 +97,8 @@ do
   TEMP_CONFIG_STYLELINT="${testFolder}/stylelint-test-file-${STYLELINT_VERSION}.json"
   logDebug "create temporary stylelint config file: ${TEMP_CONFIG_STYLELINT}"
   echo "{\"extends\":\"../../lib/stylelint/${STYLELINT_VERSION}/stylelint.config.js\"}" > ${TEMP_CONFIG_STYLELINT}
-  logDebug "run command \"npx stylelint@${STYLELINT_VERSION} --config ${TEMP_CONFIG_STYLELINT} ${TEMP_TEST_STYLELINT}\""
-  npx stylelint@${STYLELINT_VERSION} --config ${TEMP_CONFIG_STYLELINT} ${TEMP_TEST_STYLELINT}
+  logDebug "run command \"npx --yes stylelint@${STYLELINT_VERSION} --config ${TEMP_CONFIG_STYLELINT} ${TEMP_TEST_STYLELINT}\""
+  npx --yes stylelint@${STYLELINT_VERSION} --config ${TEMP_CONFIG_STYLELINT} ${TEMP_TEST_STYLELINT}
   ghActionsGroupEnd "validate stylelint ${STYLELINT_VERSION}"
 done
 
@@ -124,8 +124,8 @@ do
   TEMP_CONFIG_TSCONFIG="${testFolder}/tsconfig-test-file-${TSCONFIG_VERSION}.json"
   logDebug "create temporary tsconfig file: ${TEMP_CONFIG_TSCONFIG}"
   echo "{\"extends\":\"../../lib/tsconfig/${TSCONFIG_VERSION}/tsconfig.json\",\"compilerOptions\":{\"baseUrl\":\".\"}}" > ${TEMP_CONFIG_TSCONFIG}
-  logDebug "run command \"npx -p typescript@${TSCONFIG_VERSION} -c 'tsc -p ${TEMP_CONFIG_TSCONFIG}'\""
-  npx -p typescript@${TSCONFIG_VERSION} -c "tsc -p ${TEMP_CONFIG_TSCONFIG}"
+  logDebug "run command \"npx --yes -p typescript@${TSCONFIG_VERSION} -c 'tsc -p ${TEMP_CONFIG_TSCONFIG}'\""
+  npx --yes -p typescript@${TSCONFIG_VERSION} -c "tsc -p ${TEMP_CONFIG_TSCONFIG}"
   ghActionsGroupEnd "validate tsconfig ${TSCONFIG_VERSION}"
 done
 
