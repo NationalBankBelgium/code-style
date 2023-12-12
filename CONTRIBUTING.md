@@ -222,7 +222,7 @@ TODO add project structure details
 
 If you want to build code-style from source, you need to...
 
-- install NodeJS (12.0.0+) and npm (7.0.0+)
+- install NodeJS (18.0.0+) and npm (10.0.0+)
 - clone this git repository: `git clone https://github.com/NationalBankBelgium/code-style.git`
 - run `npm run install` from the root directory of code-style
 

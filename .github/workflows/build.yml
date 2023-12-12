@@ -18,17 +18,17 @@ jobs:
     env:
       LOGS_DIR: /tmp/code-style/logs
       LOGS_FILE: /tmp/code-style/logs/build-perf.log
-      NPM_VERSION: "8.x"
+      NPM_VERSION: "10.x"
       TZ: "Europe/Brussels"
     steps:
       # See: https://github.com/marketplace/actions/checkout
       - uses: actions/checkout@v4
 
       # See: https://github.com/marketplace/actions/setup-node-js-environment
-      - name: Use Node.js 14
+      - name: Use Node.js 18
         uses: actions/setup-node@v4
         with:
-          node-version: "14"
+          node-version: "18"
 
       - name: Create file & folder for GitHub Actions logs
         run: |
