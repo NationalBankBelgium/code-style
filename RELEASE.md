@@ -11,9 +11,9 @@ It will be used by release-it to push to and create the release page on GitHub (
 
 On GitHub Actions, the following should be configured:
 
--   NPM_TOKEN environment variable
-    -   if 2FA is enabled for the account the only auth-only level can be used: https://docs.npmjs.com/getting-started/using-two-factor-authentication#levels-of-authentication
-    -   that variable MUST NEVER be logged/exposed. If exposed then the token MUST be revoked and the account password changed ASAP
+- NPM_TOKEN environment variable
+  - if 2FA is enabled for the account the only auth-only level can be used: https://docs.npmjs.com/getting-started/using-two-factor-authentication#levels-of-authentication
+  - that variable MUST NEVER be logged/exposed. If exposed then the token MUST be revoked and the account password changed ASAP
 
 ## Changelog
 
@@ -26,10 +26,10 @@ We use the Angular format for our changelog and for it to work properly, please 
 
 Make sure that:
 
--   all changes have merged into master
--   everything is up to date locally
--   everything is clean locally
--   execute `npm run release`
+- all changes have merged into master
+- everything is up to date locally
+- everything is clean locally
+- execute `npm run release`
 
 Enjoy the show.
 
@@ -44,14 +44,14 @@ Refer to the "Adapting tags of published packages" section below.
 
 ### release
 
--   first we make sure that there are no local changes (if there are we stop right there)
--   then we execute release-it: https://github.com/webpro/release-it which
-    -   bumps the version in the root package.json automatically (determines the bump type to use depending on the commit message logs)
-        -   that version number will be used as basis in the build to adapt all other package.json files
-    -   generates/updates the CHANGELOG.md file using: conventional-changelog: https://github.com/conventional-changelog
-    -   commits both package.json and CHANGELOG.md
-    -   creates a new git tag and pushes it
-    -   creates a github release page and makes it final
+- first we make sure that there are no local changes (if there are we stop right there)
+- then we execute release-it: https://github.com/webpro/release-it which
+  - bumps the version in the root package.json automatically (determines the bump type to use depending on the commit message logs)
+    - that version number will be used as basis in the build to adapt all other package.json files
+  - generates/updates the CHANGELOG.md file using: conventional-changelog: https://github.com/conventional-changelog
+  - commits both package.json and CHANGELOG.md
+  - creates a new git tag and pushes it
+  - creates a github release page and makes it final
 
 After this, the release is tagged and visible on github
 
@@ -62,10 +62,10 @@ Finally, GitHub Actions executes `npm run release:publish`.
 That script makes some checks then, if all succeed it publishes the different packages on npm.
 Checks that are performed:
 
--   node version: should be "10"
--   NPM_TOKEN environment variable should be defined
--   GITHUB_REPOSITORY should be "NationalBankBelgium/code-style"
--   GH_ACTIONS_TAG should be defined and not empty (this is the case when GitHub Actions builds for a tag)
+- node version: should be "18"
+- NPM_TOKEN environment variable should be defined
+- GITHUB_REPOSITORY should be "NationalBankBelgium/code-style"
+- GH_ACTIONS_TAG should be defined and not empty (this is the case when GitHub Actions builds for a tag)
 
 ## Adapting tags of published packages
 
