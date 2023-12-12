@@ -18,17 +18,17 @@ jobs:
     env:
       LOGS_DIR: /tmp/code-style/logs
       LOGS_FILE: /tmp/code-style/logs/build-perf.log
-      NPM_VERSION: "7.x"
+      NPM_VERSION: "8.x"
       TZ: "Europe/Brussels"
     steps:
       # See: https://github.com/marketplace/actions/checkout
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
-      # See: https://github.com/marketplace/actions/setup-node-js-for-use-with-actions
-      - name: Use Node.js 12
-        uses: actions/setup-node@v1
+      # See: https://github.com/marketplace/actions/setup-node-js-environment
+      - name: Use Node.js 14
+        uses: actions/setup-node@v4
         with:
-          node-version: "12"
+          node-version: "14"
 
       - name: Create file & folder for GitHub Actions logs
         run: |
@@ -37,14 +37,18 @@ jobs:
           touch $LOGS_FILE
 
       - name: Get tag name if exists
-        id: get_tag_name
-        run: echo ::set-output name=TAG_NAME::$(echo $GITHUB_REF | sed -n "s/^refs\/tags\/\(\S*\).*$/\1/p")
+        run: |
+          TAG_NAME=$(echo $GITHUB_REF | sed -n "s/^refs\/tags\/\(\S*\).*$/\1/p")
+          echo "GH_ACTIONS_TAG=${TAG_NAME}" >> $GITHUB_ENV
 
       - name: List main variables
         run: |
           echo "Commit SHA  : ${GITHUB_SHA}"
-          echo "Tag         : ${GH_ACTIONS_TAG}"
+          echo "Tag name    : ${GH_ACTIONS_TAG}"
           echo "Reference   : ${GITHUB_REF}"
+          echo "Head branch : ${GITHUB_HEAD_REF}"
+          echo "Base branch : ${GITHUB_BASE_REF}"
+          echo "Build number: ${GITHUB_RUN_NUMBER}"
           echo "Repository  : ${GITHUB_REPOSITORY}"
           echo "Event       : ${GITHUB_EVENT_NAME}"
           echo "Author      : ${GITHUB_ACTOR}"
@@ -65,8 +69,8 @@ jobs:
       - name: Build
         run: npm run build
 
-      # See: https://github.com/marketplace/actions/upload-artifact
-      - uses: actions/upload-artifact@v1
+      # See: https://github.com/marketplace/actions/upload-a-build-artifact
+      - uses: actions/upload-artifact@v3
         with:
           name: dist-${{ github.run_id }}
           path: dist
@@ -74,7 +78,6 @@ jobs:
       - name: Release
         run: npm run release:publish
         env:
-          GH_ACTIONS_TAG: ${{ steps.get_tag_name.outputs.TAG_NAME }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Save logs
