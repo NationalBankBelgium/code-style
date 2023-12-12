@@ -1,0 +1,4 @@
+{
+  "name": "@nationalbankbelgium/code-style/prettier/2.5.x",
+  "main": ".prettierrc.js"
+}
