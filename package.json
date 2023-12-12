@@ -43,7 +43,7 @@
     "husky": "^7.0.1",
     "lint-staged": "^12.3.5",
     "pinst": "^2.1.6",
-    "prettier": "~2.3.2",
+    "prettier": "~3.1.0",
     "release-it": "^14.2.0",
     "stylelint": "~13.13.1",
     "tslint": "~6.1.0",
@@ -63,14 +63,14 @@
     "postinstall": "husky install",
     "postpack": "pinst --enable",
     "postpublish": "pinst --enable",
-    "prettier-check": "prettier \"**/*.{css,html,js,json,md,pcss,scss,ts,yml}\" --write --html-whitespace-sensitivity strict",
+    "prettier-check": "prettier \"**/*.{css,html,js,json,md,pcss,scss,ts,yml}\" --cache --write --html-whitespace-sensitivity strict",
     "release": "release-it",
     "release:publish": "bash ./release-publish.sh --trace",
     "test": "bash ./test.sh"
   },
   "lint-staged": {
     "*.{css,html,js,json,md,pcss,scss,ts,yml}": [
-      "prettier --write --html-whitespace-sensitivity strict"
+      "prettier --cache --write --html-whitespace-sensitivity strict"
     ]
   },
   "config": {
