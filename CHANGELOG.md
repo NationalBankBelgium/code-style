@@ -1,3 +1,21 @@
+# [1.8.0](https://github.com/NationalBankBelgium/code-style/compare/1.7.0...1.8.0) (2023-12-13)
+
+### Bug Fixes
+
+- **all:** add `"@types/node": "~14.14.31"` devDependency ([d65683a](https://github.com/NationalBankBelgium/code-style/commit/d65683a18a928dd78cca52ad776b79311ead2802))
+- **all:** fix test.sh in order to automatically install missing packages in `npx` cache ([ccc36f9](https://github.com/NationalBankBelgium/code-style/commit/ccc36f9d7c4e7ec6ce7c544e403100f744bf9edd))
+- **build:** fix GitHub CI workflow ([72cabbc](https://github.com/NationalBankBelgium/code-style/commit/72cabbcc52f9c4fd8f9b7157b3d5b82ffbf76990))
+
+### Features
+
+- **prettier:** add support for prettier 2.4.x ([33d54b8](https://github.com/NationalBankBelgium/code-style/commit/33d54b84bd00528d22322e4e41906009affe19cc))
+- **prettier:** add support for prettier 2.5.x ([94ce6e1](https://github.com/NationalBankBelgium/code-style/commit/94ce6e13641f352053525c8f9138591be2959e7c))
+- **prettier:** add support for prettier 2.6.x ([ae5e4ea](https://github.com/NationalBankBelgium/code-style/commit/ae5e4eab5b1475de5ac33def10caf512de4ee2f6))
+- **prettier:** add support for prettier 2.7.x ([60a7703](https://github.com/NationalBankBelgium/code-style/commit/60a770398b61d372fc633676caa37ca794f13549))
+- **prettier:** add support for prettier 2.8.x ([6cdf1b6](https://github.com/NationalBankBelgium/code-style/commit/6cdf1b6545f62a8235dbe155d3f048215d1ecef3))
+- **prettier:** add support for prettier 3.0.x ([5d7b177](https://github.com/NationalBankBelgium/code-style/commit/5d7b17777f3b84ffa2834932c5c1e9c4f206471d))
+- **prettier:** add support for prettier 3.1.x ([f924bdc](https://github.com/NationalBankBelgium/code-style/commit/f924bdca9f0f690a0aae37c178652435a1c19575))
+
 # [1.7.0](https://github.com/NationalBankBelgium/code-style/compare/1.6.0...1.7.0) (2022-12-13)
 
 ### Features
@@ -90,16 +108,11 @@
 - **tslint:** add support for tslint 6.0.x ([9f76097](https://github.com/NationalBankBelgium/code-style/commit/9f76097c97fd9172e5c5681dc8a16def508ec9f1))
 - **tslint:** add support for tslint 6.1.x ([5400f64](https://github.com/NationalBankBelgium/code-style/commit/5400f6493ccce67f0dc1a5b5ce7e22a3f9b087ee)), closes [#15](https://github.com/NationalBankBelgium/code-style/issues/15)
 
-## [1.1.1](https://github.com/NationalBankBelgium/code-style/compare/1.1.0...1.1.1) (2020-02-19)
+## [1.1.1](https://github.com/NationalBankBelgium/code-style/compare/1.0.1...1.1.1) (2020-02-19)
 
 ### Bug Fixes
 
 - **stylelint:** disable incorrecly enabled stylelint rules from stylelint 10.0.x to 13.0.x ([4c9a213](https://github.com/NationalBankBelgium/code-style/commit/4c9a213294cec17eded707fc2f411380a64e0398)), closes [#32](https://github.com/NationalBankBelgium/code-style/issues/32)
-
-# [1.1.0](https://github.com/NationalBankBelgium/code-style/compare/1.0.1...1.1.0) (2020-02-18)
-
-### Bug Fixes
-
 - **stylelint:** remove wrong extend to "stylelint-config-prettier" in stylelint 9.10.x configuration.<br />The `stylelint/9.10.x` config was mistakenly extending from `stylelint-config-prettier` and therefore the `"extends": "stylelint-config-prettier"` has been removed from that config since `code-style` doesn't depend on such library in any way.<br />Please add that yourself in your stylelint config if necessary. ([d6e6431](https://github.com/NationalBankBelgium/code-style/commit/d6e64312e2696b738e6f0293511aa2bebc445328)), closes [#17](https://github.com/NationalBankBelgium/code-style/issues/17)
 - **tslint:** remove the rules of TSLint v4.4+ from the 4.3.x subpackage ([33043da](https://github.com/NationalBankBelgium/code-style/commit/33043da212228b4b93008b10ed69817e785c79ad)), closes [#14](https://github.com/NationalBankBelgium/code-style/issues/14)
 
