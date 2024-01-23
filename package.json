@@ -32,7 +32,7 @@
     "tsconfig"
   ],
   "devDependencies": {
-    "@commitlint/cli": "^17.8.1",
+    "@commitlint/cli": "^18.5.0",
     "@commitlint/config-conventional": "^17.8.1",
     "@release-it/conventional-changelog": "^8.0.1",
     "@types/node": "~14.14.31",
