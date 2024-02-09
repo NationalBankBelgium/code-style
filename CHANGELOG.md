@@ -1,3 +1,13 @@
+# [1.9.0](https://github.com/NationalBankBelgium/code-style/compare/1.8.0...1.9.0) (2024-02-09)
+
+### Bug Fixes
+
+- **release:** fix `@release-it/conventional-changelog` usage in .release-it.json ([a8256f3](https://github.com/NationalBankBelgium/code-style/commit/a8256f3fb9ac69221436d18dbe2896a274de45df))
+
+### Features
+
+- **tsconfig:** add support for ts 4.6 and ng14 ([4c69ca0](https://github.com/NationalBankBelgium/code-style/commit/4c69ca0edf24efbe235ac3f711d84bb62d089476))
+
 # [1.8.0](https://github.com/NationalBankBelgium/code-style/compare/1.7.0...1.8.0) (2023-12-13)
 
 ### Bug Fixes
@@ -108,11 +118,16 @@
 - **tslint:** add support for tslint 6.0.x ([9f76097](https://github.com/NationalBankBelgium/code-style/commit/9f76097c97fd9172e5c5681dc8a16def508ec9f1))
 - **tslint:** add support for tslint 6.1.x ([5400f64](https://github.com/NationalBankBelgium/code-style/commit/5400f6493ccce67f0dc1a5b5ce7e22a3f9b087ee)), closes [#15](https://github.com/NationalBankBelgium/code-style/issues/15)
 
-## [1.1.1](https://github.com/NationalBankBelgium/code-style/compare/1.0.1...1.1.1) (2020-02-19)
+## [1.1.1](https://github.com/NationalBankBelgium/code-style/compare/1.1.0...1.1.1) (2020-02-19)
 
 ### Bug Fixes
 
 - **stylelint:** disable incorrecly enabled stylelint rules from stylelint 10.0.x to 13.0.x ([4c9a213](https://github.com/NationalBankBelgium/code-style/commit/4c9a213294cec17eded707fc2f411380a64e0398)), closes [#32](https://github.com/NationalBankBelgium/code-style/issues/32)
+
+# [1.1.0](https://github.com/NationalBankBelgium/code-style/compare/1.0.1...1.1.0) (2020-02-18)
+
+### Bug Fixes
+
 - **stylelint:** remove wrong extend to "stylelint-config-prettier" in stylelint 9.10.x configuration.<br />The `stylelint/9.10.x` config was mistakenly extending from `stylelint-config-prettier` and therefore the `"extends": "stylelint-config-prettier"` has been removed from that config since `code-style` doesn't depend on such library in any way.<br />Please add that yourself in your stylelint config if necessary. ([d6e6431](https://github.com/NationalBankBelgium/code-style/commit/d6e64312e2696b738e6f0293511aa2bebc445328)), closes [#17](https://github.com/NationalBankBelgium/code-style/issues/17)
 - **tslint:** remove the rules of TSLint v4.4+ from the 4.3.x subpackage ([33043da](https://github.com/NationalBankBelgium/code-style/commit/33043da212228b4b93008b10ed69817e785c79ad)), closes [#14](https://github.com/NationalBankBelgium/code-style/issues/14)
 
