@@ -1,0 +1,22 @@
+{
+  "extends": "../tsconfig.json",
+  "angularCompilerOptions": {
+    "allowEmptyCodegenFiles": false,
+    "annotateForClosureCompiler": false,
+    "annotationsAs": "static fields",
+    "disableExpressionLowering": true,
+    "disableTypeScriptVersionCheck": false,
+    "enableIvy": true,
+    "enableLegacyTemplate": false,
+    "enableResourceInlining": false,
+    "fullTemplateTypeCheck": true,
+    "generateCodeForLibraries": true,
+    "preserveWhitespaces": false,
+    "skipMetadataEmit": false,
+    "strictMetadataEmit": false,
+    "skipTemplateCodegen": false,
+    "strictTemplates": true,
+    "strictInjectionParameters": true
+  },
+  "target": "es2015"
+}
