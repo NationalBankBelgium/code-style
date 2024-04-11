@@ -1,3 +1,10 @@
+# [1.10.0](https://github.com/NationalBankBelgium/code-style/compare/1.9.0...1.10.0) (2024-04-11)
+
+### Features
+
+- **build:** update to `node 20` github workflow ([193d8c4](https://github.com/NationalBankBelgium/code-style/commit/193d8c4b085574fcaa8595925c80bf8d96d48238))
+- **tsconfig:** add configuration for typescript ([d243b63](https://github.com/NationalBankBelgium/code-style/commit/d243b63bfdae2f154aeb929cb666d48be9e1c9d4))
+
 # [1.9.0](https://github.com/NationalBankBelgium/code-style/compare/1.8.0...1.9.0) (2024-02-09)
 
 ### Bug Fixes
