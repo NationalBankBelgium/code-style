@@ -40,6 +40,13 @@ The following versions are available (based on **TypeScript** version and **Angu
 - 4.6.x - `@nationalbankbelgium/code-style/tsconfig/4.6.x`
 - 4.6.x and Angular 13 - `@nationalbankbelgium/code-style/tsconfig/4.6.x/ng13`
 - 4.6.x and Angular 14 - `@nationalbankbelgium/code-style/tsconfig/4.6.x/ng14`
+- 4.7.x - `@nationalbankbelgium/code-style/tsconfig/4.7.x`
+- 4.7.x and Angular 14 - `@nationalbankbelgium/code-style/tsconfig/4.7.x/ng14`
+- 4.8.x - `@nationalbankbelgium/code-style/tsconfig/4.8.x`
+- 4.8.x and Angular 14 - `@nationalbankbelgium/code-style/tsconfig/4.8.x/ng14`
+- 4.8.x and Angular 15 - `@nationalbankbelgium/code-style/tsconfig/4.8.x/ng15`
+- 4.9.x - `@nationalbankbelgium/code-style/tsconfig/4.9.x`
+- 4.9.x and Angular 15 - `@nationalbankbelgium/code-style/tsconfig/4.9.x/ng15`
 
 ## Usage
 
