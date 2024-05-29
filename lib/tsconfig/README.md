@@ -47,6 +47,11 @@ The following versions are available (based on **TypeScript** version and **Angu
 - 4.8.x and Angular 15 - `@nationalbankbelgium/code-style/tsconfig/4.8.x/ng15`
 - 4.9.x - `@nationalbankbelgium/code-style/tsconfig/4.9.x`
 - 4.9.x and Angular 15 - `@nationalbankbelgium/code-style/tsconfig/4.9.x/ng15`
+- 4.9.x and Angular 16 - `@nationalbankbelgium/code-style/tsconfig/4.9.x/ng16`
+- 5.0.x - `@nationalbankbelgium/code-style/tsconfig/5.0.x`
+- 5.0.x and Angular 16 - `@nationalbankbelgium/code-style/tsconfig/5.0.x/ng16`
+- 5.1.x - `@nationalbankbelgium/code-style/tsconfig/5.1.x`
+- 5.1.x and Angular 16 - `@nationalbankbelgium/code-style/tsconfig/5.1.x/ng1
 
 ## Usage
 
