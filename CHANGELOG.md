@@ -1,3 +1,9 @@
+# [1.11.0](https://github.com/NationalBankBelgium/code-style/compare/1.10.0...1.11.0) (2024-05-30)
+
+### Features
+
+- **tsconfig:** update support tsconfig@5 and angular@16 ([52de768](https://github.com/NationalBankBelgium/code-style/commit/52de76871093292009a666cd65f7fc3ae4adb278))
+
 # [1.10.0](https://github.com/NationalBankBelgium/code-style/compare/1.9.0...1.10.0) (2024-04-11)
 
 ### Features
