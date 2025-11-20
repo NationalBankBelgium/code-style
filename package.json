@@ -12,6 +12,11 @@
       "email": "christophercr@gmail.com",
       "name": "Christopher Cortes",
       "url": "https://github.com/christophercr"
+    },
+    {
+      "email": "michael.henkens@nbb.be",
+      "name": "Henkens Michaël",
+      "url": "https://github.com/mhenkens"
     }
   ],
   "license": "MIT",
@@ -43,7 +48,7 @@
     "husky": "^9.0.10",
     "lint-staged": "^15.2.0",
     "pinst": "^3.0.0",
-    "prettier": "~3.1.0",
+    "prettier": "~3.6.0",
     "release-it": "^17.0.1",
     "stylelint": "~13.13.1",
     "tslint": "~6.1.0",
