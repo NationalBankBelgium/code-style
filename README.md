@@ -45,12 +45,15 @@ To know how to release code-style, refer to [this page](/RELEASE.md).
 
 ### Alexis Georges
 
--   [@Twitter](https://twitter.com/SuperITMan_BE)
--   [@GitHub](https://github.com/SuperITMan)
+- [@GitHub](https://github.com/SuperITMan)
 
 ### Christopher Cortes
 
--   [@GitHub](https://github.com/christophercr)
+- [@GitHub](https://github.com/christophercr)
+
+### Michaël Henkens
+
+- [@GitHub](https://github.com/mhenkens)
 
 ## License
 
