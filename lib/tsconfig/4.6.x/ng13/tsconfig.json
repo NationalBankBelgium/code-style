@@ -17,6 +17,5 @@
     "skipTemplateCodegen": false,
     "strictTemplates": true,
     "strictInjectionParameters": true
-  },
-  "target": "es2015"
+  }
 }
