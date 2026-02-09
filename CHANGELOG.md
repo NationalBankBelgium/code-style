@@ -1,3 +1,18 @@
+# [1.12.0](https://github.com/NationalBankBelgium/code-style/compare/1.11.0...1.12.0) (2026-02-09)
+
+### Bug Fixes
+
+- **tsconfig:** fix error in tsconfig/4.6.x/ng13 ([bb36172](https://github.com/NationalBankBelgium/code-style/commit/bb36172ea1c405a5f9c11be07914b20af571579d)), closes [#539](https://github.com/NationalBankBelgium/code-style/issues/539)
+
+### Features
+
+- **prettier:** add support for prettier 3.2.x ([86ce65c](https://github.com/NationalBankBelgium/code-style/commit/86ce65c4c33339d73193a766afe2beea23730d54))
+- **prettier:** add support for prettier 3.3.x ([08927dc](https://github.com/NationalBankBelgium/code-style/commit/08927dcd902cbf71886c88158555ccc22f32b42a))
+- **prettier:** add support for prettier 3.4.x ([c879fcd](https://github.com/NationalBankBelgium/code-style/commit/c879fcd8a5f06d44d971941f4fdc3eba2d50e6b9))
+- **prettier:** add support for prettier 3.5.x ([d53b472](https://github.com/NationalBankBelgium/code-style/commit/d53b472d148175c382ad8bc2045e9a38dd3fe60d))
+- **prettier:** add support for prettier 3.6.x ([76a489e](https://github.com/NationalBankBelgium/code-style/commit/76a489ea5b46c4b9ecd1053242c04abcef414d71))
+- **prettier:** add support for prettier 3.7.x ([2014cbe](https://github.com/NationalBankBelgium/code-style/commit/2014cbe32af11c19d448c6b843755d608c3e5378))
+
 # [1.11.0](https://github.com/NationalBankBelgium/code-style/compare/1.10.0...1.11.0) (2024-05-30)
 
 ### Features
