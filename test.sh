@@ -127,6 +127,24 @@ do
   logDebug "run command \"npx --yes -p typescript@${TSCONFIG_VERSION} -c 'tsc -p ${TEMP_CONFIG_TSCONFIG}'\""
   npx --yes -p typescript@${TSCONFIG_VERSION} -c "tsc -p ${TEMP_CONFIG_TSCONFIG}"
   ghActionsGroupEnd "validate tsconfig ${TSCONFIG_VERSION}"
+  
+  # Check for ng subfolders and validate them
+  if [ $(ls ${tsconfigFolder}/${TSCONFIG_VERSION} | grep "^ng" | wc -l) != 0 ]; then
+    NG_SUBFOLDERS=($(ls ${tsconfigFolder}/${TSCONFIG_VERSION} | grep "^ng"))
+    if [ ${#NG_SUBFOLDERS[@]} -gt 0 ]; then
+      logDebug "Found ng subfolders: ${NG_SUBFOLDERS[*]}"
+      for NG_SUBFOLDER in ${NG_SUBFOLDERS[@]}
+      do
+        ghActionsGroupStart "validate tsconfig ${TSCONFIG_VERSION}/${NG_SUBFOLDER}" "no-xtrace"
+        TEMP_CONFIG_TSCONFIG_NG="${testFolder}/tsconfig-test-file-${TSCONFIG_VERSION}-${NG_SUBFOLDER}.json"
+        logDebug "create temporary tsconfig file: ${TEMP_CONFIG_TSCONFIG_NG}"
+        echo "{\"extends\":\"../../lib/tsconfig/${TSCONFIG_VERSION}/${NG_SUBFOLDER}/tsconfig.json\",\"compilerOptions\":{\"baseUrl\":\".\"}}" > ${TEMP_CONFIG_TSCONFIG_NG}
+        logDebug "run command \"npx --yes -p typescript@${TSCONFIG_VERSION} -c 'tsc -p ${TEMP_CONFIG_TSCONFIG_NG}'\""
+        npx --yes -p typescript@${TSCONFIG_VERSION} -c "tsc -p ${TEMP_CONFIG_TSCONFIG_NG}"
+        ghActionsGroupEnd "validate tsconfig ${TSCONFIG_VERSION}/${NG_SUBFOLDER}"
+      done
+    fi
+  fi
 done
 
 #ghActionsGroupEnd "validate tsconfig configurations"
