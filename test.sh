@@ -3,8 +3,9 @@
 set -u -e -o pipefail
 
 readonly currentDir=$(cd $(dirname $0); pwd)
-readonly testFolder=${currentDir}/.tmp/test
-readonly libFolder=${currentDir}/lib
+readonly osBasedCurrentDir=$(if command -v cygpath &> /dev/null; then cygpath -w "${currentDir}"; else echo "${currentDir}"; fi)
+readonly testFolder=${osBasedCurrentDir}/.tmp/test
+readonly libFolder=${osBasedCurrentDir}/lib
 readonly prettierFolder=${libFolder}/prettier
 readonly stylelintFolder=${libFolder}/stylelint
 readonly tsconfigFolder=${libFolder}/tsconfig
