@@ -51,7 +51,9 @@ The following versions are available (based on **TypeScript** version and **Angu
 - 5.0.x - `@nationalbankbelgium/code-style/tsconfig/5.0.x`
 - 5.0.x and Angular 16 - `@nationalbankbelgium/code-style/tsconfig/5.0.x/ng16`
 - 5.1.x - `@nationalbankbelgium/code-style/tsconfig/5.1.x`
-- 5.1.x and Angular 16 - `@nationalbankbelgium/code-style/tsconfig/5.1.x/ng1
+- 5.1.x and Angular 16 - `@nationalbankbelgium/code-style/tsconfig/5.1.x/ng16`
+- 6.0.x - `@nationalbankbelgium/code-style/tsconfig/6.0.x`
+- 6.0.x and Angular 22 - `@nationalbankbelgium/code-style/tsconfig/6.0.x/ng22`
 
 ## Usage
 
@@ -61,7 +63,7 @@ For TypeScript >= 3.2
 
 ```text
 {
-	"extends": "@nationalbankbelgium/code-style/tsconfig/4.6.x",
+	"extends": "@nationalbankbelgium/code-style/tsconfig/6.0.x",
 	"compilerOptions": {
 		// your configuration
 	}
